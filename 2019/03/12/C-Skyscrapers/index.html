@@ -3,15 +3,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>C-Skyscrapers | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="思路比赛的时候坚持做到了最后，然而还是没出来，一直超时，哭了QAQ研究的那个数重复几遍并不会有影响。其实用个数组，分别算出每个数在列和行上的排名（算的时候要把相同的数合并了）就行了。其他: 我们发现第 i行和第 j列仅在 (i,j)处产生联系，其余都是独立的。因此对于所有元素，可以在 O(nmlog⁡n)的时间里知道它在那一行/那一列的排名，行和列、大的和小的都要照顾到。假设它在那一行里排名为 p">
+<meta name="keywords" content="Cf Round 545 (Div. 2)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C-Skyscrapers">
+<meta property="og:url" content="http://yoursite.com/2019/03/12/C-Skyscrapers/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="思路比赛的时候坚持做到了最后，然而还是没出来，一直超时，哭了QAQ研究的那个数重复几遍并不会有影响。其实用个数组，分别算出每个数在列和行上的排名（算的时候要把相同的数合并了）就行了。其他: 我们发现第 i行和第 j列仅在 (i,j)处产生联系，其余都是独立的。因此对于所有元素，可以在 O(nmlog⁡n)的时间里知道它在那一行/那一列的排名，行和列、大的和小的都要照顾到。假设它在那一行里排名为 p">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-12T06:06:28.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="C-Skyscrapers">
+<meta name="twitter:description" content="思路比赛的时候坚持做到了最后，然而还是没出来，一直超时，哭了QAQ研究的那个数重复几遍并不会有影响。其实用个数组，分别算出每个数在列和行上的排名（算的时候要把相同的数合并了）就行了。其他: 我们发现第 i行和第 j列仅在 (i,j)处产生联系，其余都是独立的。因此对于所有元素，可以在 O(nmlog⁡n)的时间里知道它在那一行/那一列的排名，行和列、大的和小的都要照顾到。假设它在那一行里排名为 p">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +65,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-C-Skyscrapers" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-C-Skyscrapers" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/12/C-Skyscrapers/" class="article-date">
   <time datetime="2019-03-12T05:51:39.000Z" itemprop="datePublished">2019-03-12</time>
@@ -75,8 +78,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/12/C-Skyscrapers/">C-Skyscrapers</a>
+    <h1 class="article-title" itemprop="name">
+      C-Skyscrapers
     </h1>
   
 
@@ -97,144 +100,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-A-Sushi-for-Two" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/11/A-Sushi-for-Two/" class="article-date">
-  <time datetime="2019-03-11T05:37:44.000Z" itemprop="datePublished">2019-03-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/11/A-Sushi-for-Two/">A Sushi for Two</a>
-    </h1>
+    <a href="/2019/03/11/A-Sushi-for-Two/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">A Sushi for Two</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>就是找111222或者222111这样的串，暴力搜索了一下，找到1和2之间的位置，然后判断它的最大长度，居然就过了（其实可以再节约时间吧，没仔细想了<br><strong>其他:</strong> 令共有 k段连续的区间，第 i段区间的长度设为 ai，则答案是在求maxi=1k−1min(ai,ai+1)</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	int a[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	int sum=0;</span><br><span class="line">	for(int i=0;i&lt;n-1;i++)&#123;</span><br><span class="line">		if(a[i]!=a[i+1])&#123;</span><br><span class="line">			int N=1;</span><br><span class="line">			for(int j=1;;j++)&#123;</span><br><span class="line">				int k=i+1+j;</span><br><span class="line">				int k2=i-j;</span><br><span class="line">				if(k2&gt;=0&amp;&amp;k&lt;n)&#123;</span><br><span class="line">					if(a[i-j]==a[i]&amp;&amp;a[i+1+j]==a[i+1])&#123;</span><br><span class="line">						N++;continue;</span><br><span class="line">					&#125;</span><br><span class="line">					else break;</span><br><span class="line">				&#125;</span><br><span class="line">				else break;</span><br><span class="line">			&#125;</span><br><span class="line">			N*=2;</span><br><span class="line">			if(N&gt;sum)sum=N;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>Arkady邀请Anna到寿司店吃饭。 餐厅有点不寻常：它提供n个连续排列的寿司，顾客必须选择这些寿司的连续子段才能购买。<br>寿司有两种类型：金枪鱼或鳗鱼。 让我们把左寿司的第i个类型表示为ti，其中ti = 1表示金枪鱼的类型，ti = 2表示与鳗鱼相同。<br>Arkady不喜欢金枪鱼，Anna不喜欢鳗鱼。 Arkady希望选择这样一个连续的寿司子段，它具有相同数量的每种类型的寿司，并且每个子段的每一半只有一种寿司。 例如，子段[2,2,2,1,1,1]是有效的，但子段[1,2,1,2,1,2]不是，因为两半都包含两种类型的寿司。<br>找到Arkady可以购买的寿司最长的连续子段的长度。</p>
-<p>第一行包含一个整数n（2≤n≤100000） - 寿司的数量。<br>第二行包含n个整数t1，t2，…，tn（ti = 1，表示寿司金枪鱼或ti = 2，表示带有鳗鱼的寿司），表示从左到右的寿司类型。<br>保证每种类型至少有一件寿司。请注意，这意味着至少有一个有效的连续段。</p>
-<p>打印单个整数 - 有效连续段的最大长度<br>样例：<br>7<br>2 2 2 1 1 2 2<br>答案：<br>4</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/11/A-Sushi-for-Two/" data-id="cjt5dxtft0000ggtd262kxvaj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-第一篇博客" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/01/第一篇博客/" class="article-date">
-  <time datetime="2019-02-01T12:49:25.000Z" itemprop="datePublished">2019-02-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/01/第一篇博客/">第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h1><h2 id="2019-2-1"><a href="#2019-2-1" class="headerlink" title="2019/2/1"></a>2019/2/1</h2><ul>
-<li>尝试搭建博客</li>
-<li>一步步照着做了一晚上</li>
-<li>然而失败…  </li>
-</ul>
-<h2 id="2019-3-10"><a href="#2019-3-10" class="headerlink" title="2019/3/10"></a>2019/3/10</h2><ul>
-<li>开学后玩vscode，发现好像是之前改完没保存，十分智障了，于是重新尝试一波</li>
-<li>之后又一直智障的在.ssh文件里用hexo clean命令，疯狂弹usage，无语。</li>
-<li>但是！！最后终于成功了！！流下感动的泪水！！</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/01/第一篇博客/" data-id="cjt5dxtg10003ggtdpu6hrthw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/01/hello-world/" class="article-date">
-  <time datetime="2019-02-01T10:29:45.146Z" itemprop="datePublished">2019-02-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/01/hello-world/" data-id="cjt5dxtfy0001ggtdjnezv8ie" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         

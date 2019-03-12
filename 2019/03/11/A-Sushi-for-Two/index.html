@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>A Sushi for Two | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="思路就是找111222或者222111这样的串，暴力搜索了一下，找到1和2之间的位置，然后判断它的最大长度，居然就过了（其实可以再节约时间吧，没仔细想了其他: 令共有 k段连续的区间，第 i段区间的长度设为 ai，则答案是在求maxi=1k−1min(ai,ai+1)  12345678910111213141516171819202122232425262728293031#include&amp;lt">
+<meta name="keywords" content="Cf Round 545 (Div. 2)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Sushi for Two">
+<meta property="og:url" content="http://yoursite.com/2019/03/11/A-Sushi-for-Two/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="思路就是找111222或者222111这样的串，暴力搜索了一下，找到1和2之间的位置，然后判断它的最大长度，居然就过了（其实可以再节约时间吧，没仔细想了其他: 令共有 k段连续的区间，第 i段区间的长度设为 ai，则答案是在求maxi=1k−1min(ai,ai+1)  12345678910111213141516171819202122232425262728293031#include&amp;lt">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-12T02:57:31.238Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Sushi for Two">
+<meta name="twitter:description" content="思路就是找111222或者222111这样的串，暴力搜索了一下，找到1和2之间的位置，然后判断它的最大长度，居然就过了（其实可以再节约时间吧，没仔细想了其他: 令共有 k段连续的区间，第 i段区间的长度设为 ai，则答案是在求maxi=1k−1min(ai,ai+1)  12345678910111213141516171819202122232425262728293031#include&amp;lt">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-A-Sushi-for-Two" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/11/A-Sushi-for-Two/" class="article-date">
+  <time datetime="2019-03-11T05:37:44.000Z" itemprop="datePublished">2019-03-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      A Sushi for Two
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>就是找111222或者222111这样的串，暴力搜索了一下，找到1和2之间的位置，然后判断它的最大长度，居然就过了（其实可以再节约时间吧，没仔细想了<br><strong>其他:</strong> 令共有 k段连续的区间，第 i段区间的长度设为 ai，则答案是在求maxi=1k−1min(ai,ai+1)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	int a[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	int sum=0;</span><br><span class="line">	for(int i=0;i&lt;n-1;i++)&#123;</span><br><span class="line">		if(a[i]!=a[i+1])&#123;</span><br><span class="line">			int N=1;</span><br><span class="line">			for(int j=1;;j++)&#123;</span><br><span class="line">				int k=i+1+j;</span><br><span class="line">				int k2=i-j;</span><br><span class="line">				if(k2&gt;=0&amp;&amp;k&lt;n)&#123;</span><br><span class="line">					if(a[i-j]==a[i]&amp;&amp;a[i+1+j]==a[i+1])&#123;</span><br><span class="line">						N++;continue;</span><br><span class="line">					&#125;</span><br><span class="line">					else break;</span><br><span class="line">				&#125;</span><br><span class="line">				else break;</span><br><span class="line">			&#125;</span><br><span class="line">			N*=2;</span><br><span class="line">			if(N&gt;sum)sum=N;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>Arkady邀请Anna到寿司店吃饭。 餐厅有点不寻常：它提供n个连续排列的寿司，顾客必须选择这些寿司的连续子段才能购买。<br>寿司有两种类型：金枪鱼或鳗鱼。 让我们把左寿司的第i个类型表示为ti，其中ti = 1表示金枪鱼的类型，ti = 2表示与鳗鱼相同。<br>Arkady不喜欢金枪鱼，Anna不喜欢鳗鱼。 Arkady希望选择这样一个连续的寿司子段，它具有相同数量的每种类型的寿司，并且每个子段的每一半只有一种寿司。 例如，子段[2,2,2,1,1,1]是有效的，但子段[1,2,1,2,1,2]不是，因为两半都包含两种类型的寿司。<br>找到Arkady可以购买的寿司最长的连续子段的长度。</p>
+<p>第一行包含一个整数n（2≤n≤100000） - 寿司的数量。<br>第二行包含n个整数t1，t2，…，tn（ti = 1，表示寿司金枪鱼或ti = 2，表示带有鳗鱼的寿司），表示从左到右的寿司类型。<br>保证每种类型至少有一件寿司。请注意，这意味着至少有一个有效的连续段。</p>
+<p>打印单个整数 - 有效连续段的最大长度<br>样例：<br>7<br>2 2 2 1 1 2 2<br>答案：<br>4</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/11/A-Sushi-for-Two/" data-id="cjt5dxtft0000ggtd262kxvaj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/12/C-Skyscrapers/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C-Skyscrapers
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/01/第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第一篇博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Cf-Round-545-Div-2/" style="font-size: 10px;">Cf Round 545 (Div. 2)</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/12/C-Skyscrapers/">C-Skyscrapers</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/11/A-Sushi-for-Two/">A Sushi for Two</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/01/第一篇博客/">第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
