@@ -84,7 +84,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>用列方程的方式，列出来几个关系式，不要总是空想了（新思路）。首先应该想到的就是用四层for循环a,b,c,d（当然会超时），然后再用a算出d，用b算出c。<br><strong>其他:</strong><br><a href="https://www.cnblogs.com/wrjlinkkkkkk/p/10505395.html" target="_blank" rel="noopener">https://www.cnblogs.com/wrjlinkkkkkk/p/10505395.html</a><br>设两个串中出现”00””01””10””11”的总数是A,B,C,D，我们选的个数分别是a,b,c,d<br>数据最多能承受n^2的暴力<br>根据题意，有a+b+c+d=n/2     ①<br>c+d=B-b+D-d    ②<br>联立得d=B+D+a-n/2<br>于是我们暴力a，可以得到d<br>然后将a,d带入①可得b+c=n/2-a-d<br>暴力b可得c<br>最后只要a,b,c,d是否全部合法，输出方案即可</p>
+        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>用列方程的方式，列出来几个关系式，不要总是空想了（新思路）。首先应该想到的就是用四层for循环a,b,c,d（当然会超时），然后再用a算出d，用b算出c，就可以少循环两次。<br><strong>其他:</strong><br><a href="https://www.cnblogs.com/wrjlinkkkkkk/p/10505395.html" target="_blank" rel="noopener">https://www.cnblogs.com/wrjlinkkkkkk/p/10505395.html</a><br>设两个串中出现”00””01””10””11”的总数是A,B,C,D，我们选的个数分别是a,b,c,d<br>数据最多能承受n^2的暴力<br>根据题意，有a+b+c+d=n/2     ①<br>c+d=B-b+D-d    ②<br>联立得d=B+D+a-n/2<br>于是我们暴力a，可以得到d<br>然后将a,d带入①可得b+c=n/2-a-d<br>暴力b可得c<br>最后只要a,b,c,d是否全部合法，输出方案即可</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;getchar();</span><br><span class="line">	int x[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		x[i]=getchar();</span><br><span class="line">		x[i]-=48;</span><br><span class="line">	&#125;</span><br><span class="line">	getchar();</span><br><span class="line">	int sum[4]=&#123;0&#125;;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		int aa;</span><br><span class="line">		aa=getchar();</span><br><span class="line">		aa-=48;</span><br><span class="line">		x[i]=x[i]+aa*2;</span><br><span class="line">		sum[x[i]]++;</span><br><span class="line">	&#125;</span><br><span class="line">//	cout&lt;&lt;sum[0]&lt;&lt;&quot;@&quot;&lt;&lt;sum[1]&lt;&lt;&quot;@&quot;&lt;&lt;sum[2]&lt;&lt;&quot;@&quot;&lt;&lt;sum[3]&lt;&lt;endl;</span><br><span class="line">	int a,b,c,d;</span><br><span class="line">	bool y=0;</span><br><span class="line">	for(a=0;a&lt;=sum[0];a++)&#123;</span><br><span class="line">		d=a+sum[2]+sum[3]-n/2;</span><br><span class="line">		for(b=0;b&lt;=sum[1];b++)&#123;</span><br><span class="line">			c=n/2-a-b-d;</span><br><span class="line">//			cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;d&lt;&lt;endl;</span><br><span class="line">			if(a&lt;0||b&lt;0||c&lt;0||d&lt;0)continue;</span><br><span class="line">			else if(d&gt;sum[3]||c&gt;sum[2])continue;</span><br><span class="line">			else &#123;</span><br><span class="line">				y=1;break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if(y)break;</span><br><span class="line">	&#125;</span><br><span class="line">	if(!y)&#123;</span><br><span class="line">		cout&lt;&lt;-1&lt;&lt;endl;exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">//	cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;d&lt;&lt;endl;</span><br><span class="line">	int s=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		if(x[i]==0&amp;&amp;a!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			a-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		if(x[i]==1&amp;&amp;b!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			b-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		if(x[i]==2&amp;&amp;c!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			c-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		if(x[i]==3&amp;&amp;d!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			d-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p> Polycarp是马戏团的负责人。在剧团中有n个偶数艺术家。众所周知，第i个艺术家是否可以作为小丑表演（如果是，则ci = 1，否则ci = 0），以及他们是否可以作为杂技演员表演（如果是，则ai = 1，否则ai = 0 ）。<br>将艺术家分成两个表演：<br>每个艺术家只演出一场表演，两场演出中的艺术家人数相等（即等于n/2），<br>在第一场演出中可以扮演小丑的艺术家数量与在第二场演出中可以扮演杂技演员的艺术家人数相同。<br><strong>输入:</strong><br>第一行包含一个整数n（2≤n≤5000，n是偶数） - 剧团中艺术家的数量。<br>第二行包含n个数字c1c2 … cn，如果第i个艺术家可以作为小丑表演，则其第i个等于1，否则为0。<br>第三行包含n个数字a1a2 … an<br>如果第i个艺术家可以作为杂技演员表演，则第i个等于1，否则为0。<br><strong>输出:</strong><br>打印n/2个不同的整数 - 应该在第一场演出中演奏的艺术家的数。<br>如果有多个答案，请打印任何答案。<br>如果没有解决方案，则打印单个整数-1。<br><strong>样例:</strong><br>4<br>0011<br>0101<br>答案：<br>1 4  </p>
 <hr>
@@ -96,7 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/13/B-Circus/" data-id="cjt82f5vk0002d0td8z26yjj2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/13/B-Circus/" data-id="cjt82jy1j0001xotdw2q3by4x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
@@ -135,7 +135,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/12/C-Skyscrapers/" data-id="cjt82f5vn0004d0tdwmauvf2r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/12/C-Skyscrapers/" data-id="cjt82jy1o0004xotdv837rvau" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
@@ -178,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/11/A-Sushi-for-Two/" data-id="cjt82f5vh0001d0tdktvvdmsh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/11/A-Sushi-for-Two/" data-id="cjt82jy1d0000xotdu9bxb17d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
@@ -226,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/01/第一篇博客/" data-id="cjt82f5vo0005d0tdl45z5e2w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/01/第一篇博客/" data-id="cjt82jy220009xotd9gsc7b70" class="article-share-link">Share</a>
       
       
     </footer>
@@ -271,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/01/hello-world/" data-id="cjt82f5vc0000d0td8brlzx6f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/01/hello-world/" data-id="cjt82jy1n0003xotd2jxydgdu" class="article-share-link">Share</a>
       
       
     </footer>
