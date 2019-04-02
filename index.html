@@ -1,500 +1,334 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>一起喵喵喵喵喵~</title>
+  <meta name="author" content="小乔QvQ">
+
+  
+
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <meta property="og:site_name" content="一起喵喵喵喵喵~">
+
   
   
-    <link rel="icon" href="/favicon.png">
+
   
+    <meta property="og:image" content="">
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
   
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  <link href="/css/images/favicon.ico" rel="icon">
   
+
+  <link rel="alternate" href="/atom.xml" title="一起喵喵喵喵喵~" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
 
 </head>
 </html>
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <div class="outer">
-        <div class="widget-wrap mobile-header">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="/images/avatar.jpeg">
-    <h2 class="author">John Doe</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>1</strong><br>标签</div></a>
-    </div>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
-  </div>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">一起喵喵喵喵喵~</a></h1>
+  <h2><a href="/"></a></h2>
 </div>
-
-        <section id="main">
-  
-    <article id="post-B-Circus" class="wow slideInRight article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/13/B-Circus/" class="article-date">
-  <time class="post-time" datetime="2019-03-13T13:18:04.000Z" itemprop="datePublished">
-    <span class="post-month">3月</span><br>
-    <span class="post-day">13</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
+<nav id="main-nav" class="alignright">
+  <ul>
     
+      <li><a href="/">Home</a></li>
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/13/B-Circus/">B Circus</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
+      <li><a href="/archives">Archives</a></li>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>用列方程的方式，列出来几个关系式，不要总是空想了（新思路）。首先应该想到的就是用四层for循环a,b,c,d（当然会超时），然后再用a算出d，用b算出c，就可以少循环两次。<br><strong>其他:</strong><br><a href="https://www.cnblogs.com/wrjlinkkkkkk/p/10505395.html" target="_blank" rel="noopener">https://www.cnblogs.com/wrjlinkkkkkk/p/10505395.html</a><br>设两个串中出现”00””01””10””11”的总数是A,B,C,D，我们选的个数分别是a,b,c,d<br>数据最多能承受n^2的暴力<br>根据题意，有a+b+c+d=n/2     ①<br>c+d=B-b+D-d    ②<br>联立得d=B+D+a-n/2<br>于是我们暴力a，可以得到d<br>然后将a,d带入①可得b+c=n/2-a-d<br>暴力b可得c<br>最后只要a,b,c,d是否全部合法，输出方案即可</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;getchar();</span><br><span class="line">	int x[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		x[i]=getchar();</span><br><span class="line">		x[i]-=48;</span><br><span class="line">	&#125;</span><br><span class="line">	getchar();</span><br><span class="line">	int sum[4]=&#123;0&#125;;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		int aa;</span><br><span class="line">		aa=getchar();</span><br><span class="line">		aa-=48;</span><br><span class="line">		x[i]=x[i]+aa*2;</span><br><span class="line">		sum[x[i]]++;</span><br><span class="line">	&#125;</span><br><span class="line">//	cout&lt;&lt;sum[0]&lt;&lt;&quot;@&quot;&lt;&lt;sum[1]&lt;&lt;&quot;@&quot;&lt;&lt;sum[2]&lt;&lt;&quot;@&quot;&lt;&lt;sum[3]&lt;&lt;endl;</span><br><span class="line">	int a,b,c,d;</span><br><span class="line">	bool y=0;</span><br><span class="line">	for(a=0;a&lt;=sum[0];a++)&#123;</span><br><span class="line">		d=a+sum[2]+sum[3]-n/2;</span><br><span class="line">		for(b=0;b&lt;=sum[1];b++)&#123;</span><br><span class="line">			c=n/2-a-b-d;</span><br><span class="line">//			cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;d&lt;&lt;endl;</span><br><span class="line">			if(a&lt;0||b&lt;0||c&lt;0||d&lt;0)continue;</span><br><span class="line">			else if(d&gt;sum[3]||c&gt;sum[2])continue;</span><br><span class="line">			else &#123;</span><br><span class="line">				y=1;break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if(y)break;</span><br><span class="line">	&#125;</span><br><span class="line">	if(!y)&#123;</span><br><span class="line">		cout&lt;&lt;-1&lt;&lt;endl;exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">//	cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;c&lt;&lt;&quot; &quot;&lt;&lt;d&lt;&lt;endl;</span><br><span class="line">	int s=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		if(x[i]==0&amp;&amp;a!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			a-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		if(x[i]==1&amp;&amp;b!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			b-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		if(x[i]==2&amp;&amp;c!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			c-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		if(x[i]==3&amp;&amp;d!=0)&#123;</span><br><span class="line">			cout&lt;&lt;i+1;</span><br><span class="line">			d-=1;s++;</span><br><span class="line">			if(s!=n/2)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p> Polycarp是马戏团的负责人。在剧团中有n个偶数艺术家。众所周知，第i个艺术家是否可以作为小丑表演（如果是，则ci = 1，否则ci = 0），以及他们是否可以作为杂技演员表演（如果是，则ai = 1，否则ai = 0 ）。<br>将艺术家分成两个表演：<br>每个艺术家只演出一场表演，两场演出中的艺术家人数相等（即等于n/2），<br>在第一场演出中可以扮演小丑的艺术家数量与在第二场演出中可以扮演杂技演员的艺术家人数相同。<br><strong>输入:</strong><br>第一行包含一个整数n（2≤n≤5000，n是偶数） - 剧团中艺术家的数量。<br>第二行包含n个数字c1c2 … cn，如果第i个艺术家可以作为小丑表演，则其第i个等于1，否则为0。<br>第三行包含n个数字a1a2 … an<br>如果第i个艺术家可以作为杂技演员表演，则第i个等于1，否则为0。<br><strong>输出:</strong><br>打印n/2个不同的整数 - 应该在第一场演出中演奏的艺术家的数。<br>如果有多个答案，请打印任何答案。<br>如果没有解决方案，则打印单个整数-1。<br><strong>样例:</strong><br>4<br>0011<br>0101<br>答案：<br>1 4  </p>
-<hr>
-<p>6<br>000000<br>111111<br>答案：<br>-1</p>
-<hr>
-<p>4<br>0011<br>1100<br>答案：<br>4 3  </p>
-<hr>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/13/B-Circus/" data-id="cjtz8tjp500019gtd5yhxp470" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
-
-    </footer>
-  </div>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
   
-</article>
-
-
-
-
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-03-13T13:18:04.000Z"><a href="/2019/03/13/B-Circus/">2019-03-13</a></time>
+      
+      
   
-    <article id="post-C-Skyscrapers" class="wow slideInRight article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/12/C-Skyscrapers/" class="article-date">
-  <time class="post-time" datetime="2019-03-12T05:51:39.000Z" itemprop="datePublished">
-    <span class="post-month">3月</span><br>
-    <span class="post-day">12</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
+    <h1 class="title"><a href="/2019/03/13/B-Circus/">B Circus</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>用列方程的方式，列出来几个关系式，不要总是空想了（新思路）。首先应该想到的就是用四层for循环a,b,c,d（当然会超时），然后再用a算出d，用b算出c，就可以少循环两次。<br>
+      
+    </p></div>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/12/C-Skyscrapers/">C-Skyscrapers</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>比赛的时候坚持做到了最后，然而还是没出来，一直超时，哭了QAQ<br>研究的那个数重复几遍并不会有影响。其实用个数组，分别算出每个数在列和行上的排名（算的时候要把相同的数合并了）就行了。<br><strong>其他:</strong> 我们发现第 i行和第 j列仅在 (i,j)处产生联系，其余都是独立的。<br>因此对于所有元素，可以在 O(nmlog⁡n)的时间里知道它在那一行/那一列的排名，行和列、大的和小的都要照顾到。假设它在那一行里排名为 p，那一列里排名为 q，则答案为max(p,q)+max(m−p,n−q)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt; </span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct pig&#123;</span><br><span class="line">	int x;</span><br><span class="line">	int place;</span><br><span class="line">&#125;;</span><br><span class="line">bool cmp(pig a,pig b)&#123;</span><br><span class="line">	return a.x&lt;b.x;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	</span><br><span class="line">	int n,m;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	//=======输入 </span><br><span class="line">	int a[n][m];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		for(int j=0;j&lt;m;j++)&#123;</span><br><span class="line">			scanf(&quot;%d&quot;,&amp;a[i][j]);	</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	int hPai[n][m],lPai[n][m];</span><br><span class="line">	//=========求每一行的排名 </span><br><span class="line">	int hMax[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		int t=1;</span><br><span class="line">		pig p[m];</span><br><span class="line">		for(int j=0;j&lt;m;j++)&#123;</span><br><span class="line">			p[j].place=j;</span><br><span class="line">			p[j].x=a[i][j];</span><br><span class="line">		&#125;			</span><br><span class="line">		sort(p,p+m,cmp);</span><br><span class="line">		hPai[i][p[0].place]=t;</span><br><span class="line">		for(int j=1;j&lt;m;j++)&#123;</span><br><span class="line">			if(p[j].x!=p[j-1].x)t++;</span><br><span class="line">			hPai[i][p[j].place]=t;</span><br><span class="line">		&#125;</span><br><span class="line">		hMax[i]=t;</span><br><span class="line">	&#125;</span><br><span class="line">	//=========求每一列的排名 </span><br><span class="line">	int lMax[m];</span><br><span class="line">	for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">		int t=1;</span><br><span class="line">		pig p[n];</span><br><span class="line">		for(int j=0;j&lt;n;j++)&#123;</span><br><span class="line">			p[j].place=j;</span><br><span class="line">			p[j].x=a[j][i];</span><br><span class="line">		</span><br><span class="line">		&#125;			</span><br><span class="line">		sort(p,p+n,cmp);</span><br><span class="line"></span><br><span class="line">		lPai[p[0].place][i]=t;</span><br><span class="line">		for(int j=1;j&lt;n;j++)&#123;</span><br><span class="line">			</span><br><span class="line">			if(p[j].x!=p[j-1].x)t++;</span><br><span class="line">			lPai[p[j].place][i]=t;</span><br><span class="line">		&#125;</span><br><span class="line">		lMax[i]=t;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//====输出</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		for(int j=0;j&lt;m;j++)&#123;</span><br><span class="line">			printf(&quot;%d&quot;,max(hPai[i][j],lPai[i][j])+max(hMax[i]-hPai[i][j],lMax[j]-lPai[i][j]));</span><br><span class="line">			if(j!=m-1)printf(&quot; &quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		printf(&quot;\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/12/C-Skyscrapers/" data-id="cjtz8tjp800039gtduayhg4pc" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-A-Sushi-for-Two" class="wow slideInRight article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/11/A-Sushi-for-Two/" class="article-date">
-  <time class="post-time" datetime="2019-03-11T05:37:44.000Z" itemprop="datePublished">
-    <span class="post-month">3月</span><br>
-    <span class="post-day">11</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/11/A-Sushi-for-Two/">A Sushi for Two</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>就是找111222或者222111这样的串，暴力搜索了一下，找到1和2之间的位置，然后判断它的最大长度，居然就过了（其实可以再节约时间吧，没仔细想了<br><strong>其他:</strong> 令共有 k段连续的区间，第 i段区间的长度设为 ai，则答案是在求maxi=1k−1min(ai,ai+1)</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	int a[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	int sum=0;</span><br><span class="line">	for(int i=0;i&lt;n-1;i++)&#123;</span><br><span class="line">		if(a[i]!=a[i+1])&#123;</span><br><span class="line">			int N=1;</span><br><span class="line">			for(int j=1;;j++)&#123;</span><br><span class="line">				int k=i+1+j;</span><br><span class="line">				int k2=i-j;</span><br><span class="line">				if(k2&gt;=0&amp;&amp;k&lt;n)&#123;</span><br><span class="line">					if(a[i-j]==a[i]&amp;&amp;a[i+1+j]==a[i+1])&#123;</span><br><span class="line">						N++;continue;</span><br><span class="line">					&#125;</span><br><span class="line">					else break;</span><br><span class="line">				&#125;</span><br><span class="line">				else break;</span><br><span class="line">			&#125;</span><br><span class="line">			N*=2;</span><br><span class="line">			if(N&gt;sum)sum=N;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>Arkady邀请Anna到寿司店吃饭。 餐厅有点不寻常：它提供n个连续排列的寿司，顾客必须选择这些寿司的连续子段才能购买。<br>寿司有两种类型：金枪鱼或鳗鱼。 让我们把左寿司的第i个类型表示为ti，其中ti = 1表示金枪鱼的类型，ti = 2表示与鳗鱼相同。<br>Arkady不喜欢金枪鱼，Anna不喜欢鳗鱼。 Arkady希望选择这样一个连续的寿司子段，它具有相同数量的每种类型的寿司，并且每个子段的每一半只有一种寿司。 例如，子段[2,2,2,1,1,1]是有效的，但子段[1,2,1,2,1,2]不是，因为两半都包含两种类型的寿司。<br>找到Arkady可以购买的寿司最长的连续子段的长度。</p>
-<p>第一行包含一个整数n（2≤n≤100000） - 寿司的数量。<br>第二行包含n个整数t1，t2，…，tn（ti = 1，表示寿司金枪鱼或ti = 2，表示带有鳗鱼的寿司），表示从左到右的寿司类型。<br>保证每种类型至少有一件寿司。请注意，这意味着至少有一个有效的连续段。</p>
-<p>打印单个整数 - 有效连续段的最大长度<br>样例：<br>7<br>2 2 2 1 1 2 2<br>答案：<br>4</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/11/A-Sushi-for-Two/" data-id="cjtz8tjp000009gtdpzblhzka" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-第一篇博客" class="wow slideInRight article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/01/第一篇博客/" class="article-date">
-  <time class="post-time" datetime="2019-02-01T12:49:25.000Z" itemprop="datePublished">
-    <span class="post-month">2月</span><br>
-    <span class="post-day">01</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/01/第一篇博客/">第一篇博客</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h1><h2 id="2019-2-1"><a href="#2019-2-1" class="headerlink" title="2019/2/1"></a>2019/2/1</h2><ul>
-<li>尝试搭建博客</li>
-<li>一步步照着做了一晚上</li>
-<li>然而失败…  </li>
-</ul>
-<h2 id="2019-3-10"><a href="#2019-3-10" class="headerlink" title="2019/3/10"></a>2019/3/10</h2><ul>
-<li>开学后玩vscode，发现好像是之前改完没保存，十分智障了，于是重新尝试一波</li>
-<li>之后又一直智障的在.ssh文件里用hexo clean命令，疯狂弹usage，无语。</li>
-<li>但是！！最后终于成功了！！流下感动的泪水！！</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/01/第一篇博客/" data-id="cjtz8tjpa00059gtdqb9iydyj" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-hello-world" class="wow slideInRight article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/01/hello-world/" class="article-date">
-  <time class="post-time" datetime="2019-02-01T10:29:45.146Z" itemprop="datePublished">
-    <span class="post-month">2月</span><br>
-    <span class="post-day">01</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/01/hello-world/" data-id="cjtz8tjp900049gtddflubx0c" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <h1 class="blog-title">Hexo</h1>
-    <h2 class="blog-subtitle"></h2>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
-  </div>
-</div>
-
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="/images/avatar.jpeg">
-    <h2 class="author">John Doe</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>1</strong><br>标签</div></a>
-    </div>
-
-
-
-    <div class="social-link">
-      
-        <a class="hvr-bounce-in" href="http://github.com/ShanaMaid" target="_blank" title="Github">
-          Github
-        </a>
-      
-    </div>
-
-    <div class="friend-link">
-      <h2>友情链接</h2>
-      
-        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
-          ShanaMaid
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-  
-</aside>
-        
+    <footer>
+      <div class="alignleft">
+        <a href="/2019/03/13/B-Circus/#more" class="more-link">更多内容</a>
       </div>
-      <footer id="footer">
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy;2018 - 2019 John Doe<br>
-      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
-      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+  <div class="tags">
+    <a href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-03-12T05:51:39.000Z"><a href="/2019/03/12/C-Skyscrapers/">2019-03-12</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2019/03/12/C-Skyscrapers/">C-Skyscrapers</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>比赛的时候坚持做到了最后，然而还是没出来，一直超时，哭了QAQ<br>研究的那个数重复几遍并不会有影响。其实用个数组，分别算出每个数在列和行上的排名（算的时候要把相同的数合并了）就行了。<br>
+      
+    </p></div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2019/03/12/C-Skyscrapers/#more" class="more-link">更多内容</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-03-11T05:37:44.000Z"><a href="/2019/03/11/A-Sushi-for-Two/">2019-03-11</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2019/03/11/A-Sushi-for-Two/">A Sushi for Two</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>就是找111222或者222111这样的串，暴力搜索了一下，找到1和2之间的位置，然后判断它的最大长度，居然就过了（其实可以再节约时间吧，没仔细想了<br><strong>其他:</strong> 令共有 k段连续的区间，第 i段区间的长度设为 ai，则答案是在求maxi=1k−1min(ai,ai+1)<br>
+      
+    </p></div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2019/03/11/A-Sushi-for-Two/#more" class="more-link">更多内容</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-02-01T12:49:25.000Z"><a href="/2019/02/01/第一篇博客/">2019-02-01</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2019/02/01/第一篇博客/">第一篇博客</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h1>
       
     </div>
     
-  </div>
-</footer>
-    </div>
+    <footer>
+      <div class="alignleft">
+        <a href="/2019/02/01/第一篇博客/#more" class="more-link">更多内容</a>
+      </div>
+    </footer>
     
-
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
-<script>
-new WOW().init();
-</script>   
-
-
-  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
-  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
-  <script src="/plugin/galmenu/GalMenu.js"></script>
-  <div class="GalMenu GalDropDown">
-      <div class="circle" id="gal">
-        <div class="ring">
+    <footer>
+        <div class="alignright">
           
-            <a href="/" title="" class="menuItem">首页</a>
-          
-            <a href="/tags" title="" class="menuItem">标签</a>
-          
-            <a href="/categories" title="" class="menuItem">分类</a>
-          
-            <a href="/archives" title="" class="menuItem">归档</a>
-          
-            <a href="/xxxxxxxxx" title="" class="menuItem">xxx</a>
-          
-            <a href="/xxxxxxx" title="" class="menuItem">xxxx</a>
-          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
         </div>
         
-          <audio id="audio" src="#"></audio>
         
-      </div> 
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+
+<nav id="pagination">
+  
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
 </div>
-<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
-  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
-    for (var i = 0,
-    l = items.length; i < l; i++) {
-      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
-      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
-    }</script>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/03/13/B-Circus/">B Circus</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/12/C-Skyscrapers/">C-Skyscrapers</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/11/A-Sushi-for-Two/">A Sushi for Two</a>
+      </li>
+    
+      <li>
+        <a href="/2019/02/01/第一篇博客/">第一篇博客</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Cf-Round-545-Div-2/" style="font-size: 10px;">Cf Round 545 (Div. 2)</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 小乔QvQ
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('body').GalMenu({
-      'menu': 'GalDropDown'
-    })
-  });
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
-  <section class="hidden-xs"> 
-  <ul class="cb-slideshow"> 
-    <li><span>苟利</span></li> 
-    <li><span>国家</span></li> 
-    <li><span>生死以</span></li> 
-    <li><span>岂能</span></li> 
-    <li><span>祸福</span></li> 
-    <li><span>趋避之</span></li> 
-  </ul>
-</section>
-<script src="/js/script.js"></script>
 
-
-
-  </div>
+<div id="bg"></div>
 </body>
 </html>
