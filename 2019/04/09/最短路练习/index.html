@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>最短路练习 | 一起喵喵喵喵喵~</title>
+  <meta name="author" content="小乔QvQ">
+
+  
+  <meta name="description" content="Dijkstra和spfa">
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="最短路练习">
+  <meta property="og:site_name" content="一起喵喵喵喵喵~">
+
+  
+  
+
+  
+    <meta property="og:image" content="">
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <link rel="alternate" href="/atom.xml" title="一起喵喵喵喵喵~" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">一起喵喵喵喵喵~</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-04-09T13:22:57.000Z"><a href="/2019/04/09/最短路练习/">2019-04-09</a></time>
+      
+      
+  
+    <h1 class="title">最短路练习</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Dijkstra和spfa"><a href="#Dijkstra和spfa" class="headerlink" title="Dijkstra和spfa"></a>Dijkstra和spfa</h1><a id="more"></a>
+<h2 id="A-Til-the-Cows-Come-Home"><a href="#A-Til-the-Cows-Come-Home" class="headerlink" title="A - Til the Cows Come Home"></a>A - Til the Cows Come Home</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>迪杰斯特拉算法，注意一下路是双向的。</p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>贝西在外面的田里，她想回到谷仓，在农夫约翰早上叫醒她挤奶之前尽可能多地睡一会儿。贝西需要美容觉，所以她想尽快回去。<br>农夫约翰的田里有N个(2 &lt;= N &lt;= 1000)个地标，唯一的编号是1..N。地标1是谷仓;贝茜整天站着的那片苹果园是地标性的N.奶牛在田野里用T (1 &lt;= T &lt;= 2000)在地标之间画出各种长度的双向牛道。贝西对自己的导航能力不太自信，所以一旦开始，她总是沿着一条路线走到底。根据地标之间的步道，确定贝西返回谷仓必须走的最小距离。可以保证存在这样的路由。<br>输入：<br><em>第一行:两个整数:T和N  
+</em>第二行:T+1:每一行都用三个空格分隔的整数描述一个轨迹。前两个整数是路线经过的地标。第三个整数是路径的长度，范围1..100。<br>输出：<br>*第一行:一个整数，贝茜从地标N到地标1的最小距离。<br>输入样例：<br>5 5<br>1 2 20<br>2 3 30<br>3 4 20<br>4 5 20<br>1 5 100<br>输出样例：<br>90  </p>
+<h2 id="B-Frogger"><a href="#B-Frogger" class="headerlink" title="B - Frogger"></a>B - Frogger</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>还是迪杰斯特拉算法，求出到每个石头上的最小必要跳跃距离。<br>当时没注意输出格式，傻乎乎的wa了好多次，枯了。  </p>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>弗雷迪青蛙正坐在湖中央的一块石头上。突然，他注意到菲奥娜·青蛙正坐在另一块石头上。他打算去看她，但由于水很脏，而且到处都是游客的防晒霜，他想避免游泳，而是跳着去够她。<br>不幸的是菲奥娜的石头超出了他的跳跃范围。因此，Freddy考虑使用其他石头作为中间停站，通过一系列的小跳跃到达她的位置。<br>要执行给定的跳转序列，青蛙的跳转范围显然必须至少与序列中发生的最长跳转一样长。<br>因此，两块石头之间的青蛙距离(人类也称之为极小极大距离)被定义为两块石头之间所有可能路径上的最小必要跳跃距离。<br>给你弗雷迪的石头，菲奥娜的石头和湖里所有其他石头的坐标。你的工作是计算弗雷迪和菲奥娜石头之间的青蛙距离。<br>输入：<br>输入将包含一个或多个测试用例。每个测试用例的第一行将包含石头的数量n (2&lt;=n&lt;=200)。接下来的n行每个包含两个整数xi，yi(0 &lt;=xi，yi &lt;= 1000)，表示stone #i的坐标。石头1号是弗雷迪的石头，石头2号是菲奥娜的石头，其他n-2块石头没有人。每个测试用例后面都有一个空行。输入被n的0(0)值终止。<br>输出：<br>对于每个测试用例，打印一行“Scenario #x”和一行“Frog Distance = y”，其中x替换为测试用例号(它们的编号从1开始)，y替换为适当的实数，打印为三个小数。在每个测试用例之后，甚至在最后一个测试用例之后，都放一行空白。<br>输入样例：<br>2<br>0 0<br>3 4  </p>
+<p>3<br>17 4<br>19 4<br>18 5  </p>
+<p>0<br>输出样例：<br>Scenario #1<br>Frog Distance = 5.000  </p>
+<p>Scenario #2<br>Frog Distance = 1.414  </p>
+<h2 id="C-Heavy-Transportation"><a href="#C-Heavy-Transportation" class="headerlink" title="C - Heavy Transportation"></a>C - Heavy Transportation</h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>还是迪杰斯特拉算法。<br>这道题目要求的是从1到N各个路径最小值的最大值，即d[y]=max(d[y],min(d[x],m[x][y])).  </p>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>背景<br>雨果·Heavy很高兴。Cargolifter项目失败后，他现在可以扩展业务了。但他需要一个聪明的人，告诉他是否真的有办法从他的客户建造他的巨型钢起重机的地方到所有街道都能承载重量的地方。<br>幸运的是，他已经有了一个城市规划，包括所有的街道、桥梁和所有允许的重量。不幸的是，他不知道如何找到最大的重量容量，以便告诉他的客户起重机可能变得多么沉重。但你肯定知道。<br>问题<br>您得到了城市的平面图，由十字路口之间的街道(带有重量限制)来描述，十字路口的编号从1到n。您的任务是找到从1号交叉口(Hugo’s place)到n号交叉口(customer’s place)可以运输的最大重量。您可以假设至少有一条路径。所有的街道都可以双向通行。<br>输入：<br>第一行包含场景(城市规划)的数量。第一行给出了每个城市的十字路口数量n (1 &lt;= n &lt;= 1000)和街道数量m。以下m行包含三组整数，它们指定街道的起点和终点交叉口，以及允许的最大重量，该重量为正，且不大于1000000。每对十字路口之间最多有一条街。<br>输出：<br>每个场景的输出都以包含“Scenario #i”的行开始，其中i是场景的编号，从1开始。然后打印一行包含Hugo可以传输给客户的最大允许重量。用空行结束场景的输出。<br>输入样例：<br>1<br>3 3<br>1 2 3<br>1 3 4<br>2 3 5<br>输出样例：<br>Scenario #1:<br>4</p>
+<h2 id="D-Silver-Cow-Party"><a href="#D-Silver-Cow-Party" class="headerlink" title="D - Silver Cow Party"></a>D - Silver Cow Party</h2><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>还是迪杰斯特拉算法，注意路是单向的。<br>先正着算一遍从聚会到各个农场的最短时间，再把所有道路方向反过来，再算一遍从聚会到各个农场的最短时间，分别把两个加起来，取最大值为答案。</p>
+<h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>N个农场(1≤N≤1000)各1头奶牛，方便编号1。N将参加在农场#X(1≤X≤N)举行的大型奶牛聚会，共计M(1≤M≤100,000)个单向(单行道连接成对农场;i路要求Ti(1≤Ti≤100)时间单位穿越。<br>每头牛都必须步行去参加聚会，聚会结束后，再回到她的农场。每头牛都很懒，因此会选择最短时间内的最佳路线。牛的回程路线可能与它原来去派对的路线不同，因为路是单向的。<br>在所有的牛中，一头牛走着去参加聚会，然后又走回来所需要的时间最长是多少?<br>输入：<br>第1行:三个空格分隔的整数，分别是:N、M和X<br>第二行:M+1:第i+1行用三个空格分隔的整数描述了i路:Ai、Bi和Ti。描述的道路从人工智能农场到人工智能农场，需要穿越Ti时间单位。<br>输出：<br>第1行:一个整数:任何一头牛必须行走的最长时间。<br>输入样例：<br>4 8 2<br>1 2 4<br>1 3 2<br>1 4 7<br>2 1 1<br>2 3 5<br>3 1 2<br>3 4 4<br>4 2 3<br>输出样例：<br>10 </p>
+<h2 id="E-Currency-Exchange"><a href="#E-Currency-Exchange" class="headerlink" title="E - Currency Exchange"></a>E - Currency Exchange</h2><h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><p>用的spfa，因为题目可能存在负边，所以不能用迪杰斯特拉，但用Bellman-Ford和spfa都可以。类似判负环的过程，求的是能无限松弛的最大正权路径，如果可以一直变大，说明存在正环。  </p>
+<h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a>题目</h3><p>我们城市有几个货币兑换点。假设每个点都专门使用两种特定的货币，并且只使用这些货币执行交换操作。可以有几个点专门针对同一对货币。每个点都有自己的汇率，A到B的汇率是1A的B的数量。而且每个兑换点都有一定的佣金，也就是你必须为你的兑换业务支付的金额。佣金总是以来源货币收取。<br>例如，如果你想把100美元兑换成俄罗斯卢布，汇率是29.75，佣金是0.39，你会得到(100 - 0.39)* 29.75 = 2963.3975卢布。<br>您一定知道在我们这个城市有N种不同的货币可以兑换。让我们为每种货币分配从1到N的唯一整数。然后，每个汇兑点可以用6个数字来描述:整数A和B - it兑换货币的数量，以及实际R AB、C AB、R BA和C BA -分别兑换A和B时的汇率和佣金。<br>尼克有一些现金，他想知道，在做了一些外汇交易之后，他是否能以某种方式增加资本。当然，他最终还是想把钱换成货币。帮助他回答这个难题。尼克在做他的生意时，一定要有一笔非负数的钱。<br>输入：<br>输入的第一行包含四个数字:N—货币数量，M—交换点的数量，S—Nick拥有的货币数量，V—他拥有的货币单位数量。下面的M行包含6个数字，每个数字表示对应的交换点，按上述顺序排列。数字由一个或多个空格分隔。1 &lt; = S &lt; = N &lt; = 100, 1 &lt; = M &lt; = 100, V是实数,0 &lt; = V &lt; = 10^3。<br>对于每一个点，汇率和佣金都是真实的，小数点后最多有两位数字，10 -2&lt;=汇率&lt;=10 2,0&lt;=佣金&lt;=10^2。<br>如果在这个序列中不止一次使用交换点，那么让我们将交换操作的一些序列称为simple。您可以假设，在交换操作的任何简单序列的末尾和开头，总和的数值之比将小于10^4。<br>输出：<br>如果Nick可以增加他的财富，输出YES，在其他情况下输出NO到输出文件。<br>输入样例：<br>3 2 1 20.0<br>1 2 1.00 1.00 1.00 1.00<br>2 3 1.10 1.00 1.10 1.00<br>输出样例：<br>YES  </p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/04/09/最短路练习/">最短路练习</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/13/B-Circus/">B Circus</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/12/C-Skyscrapers/">C-Skyscrapers</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/11/A-Sushi-for-Two/">A Sushi for Two</a>
+      </li>
+    
+      <li>
+        <a href="/2019/02/01/第一篇博客/">第一篇博客</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Cf-Round-545-Div-2/" style="font-size: 10px;">Cf Round 545 (Div. 2)</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 小乔QvQ
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="bg"></div>
+</body>
+</html>
