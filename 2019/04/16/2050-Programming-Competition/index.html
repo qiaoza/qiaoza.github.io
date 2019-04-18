@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>2050 Programming Competition | 一起喵喵喵喵喵~</title>
+  <meta name="author" content="小乔QvQ">
+
+  
+  <meta name="description" content="只出了1，2，4三个简单题，没有wa倒是挺好的，不过第三题没出来比较难受，当时以为要分类讨论，就觉得自己肯定没戏没怎么做(其实暴力一下就完事儿了，很简单），直接看第六题了，然而第六题是dp，并不会写QAQ还是赶紧学一学dp吧，哭了">
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="2050 Programming Competition">
+  <meta property="og:site_name" content="一起喵喵喵喵喵~">
+
+  
+  
+
+  
+    <meta property="og:image" content="">
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <link rel="alternate" href="/atom.xml" title="一起喵喵喵喵喵~" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">一起喵喵喵喵喵~</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-04-16T11:30:08.000Z"><a href="/2019/04/16/2050-Programming-Competition/">2019-04-16</a></time>
+      
+      
+  
+    <h1 class="title">2050 Programming Competition</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>只出了1，2，4三个简单题，没有wa倒是挺好的，不过第三题没出来比较难受，当时以为要分类讨论，就觉得自己肯定没戏没怎么做(其实暴力一下就完事儿了，很简单），直接看第六题了，然而第六题是dp，并不会写QAQ还是赶紧学一学dp吧，哭了<br><a id="more"></a></p>
+<h2 id="1001-开场白"><a href="#1001-开场白" class="headerlink" title="1001 开场白"></a>1001 开场白</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>没啥，就先判n是不是4的倍数，用一个循环过一遍就完事儿了，签到题</p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>来自世界各地的年青人在 <a href="https://2050.org.cn" target="_blank" rel="noopener">https://2050.org.cn</a> 握手团聚， 他们是航空航天的新生代，编程大赛的优胜者，35岁以下的创新者，科技公司的创始人，展望未来的科学家，天马行空的艺术家…… TA们期待在这里与所有人分享交流，给彼此灵感，给未来答案。我们想要用10个题目，大声喊出年青人的声音。我们希望和大家一起用技术创造一个更好的2050。<br>第一道题目，我们来玩一个数字游戏。给出一个数字 n，我们想知道 n 是不是若干个 2050 依次拼接起来的。<br><strong>输入：</strong><br>第一行一个正整数 T (T≤10) 表示数据组数。<br>对于每组数据，一行一个正整数 n (1≤n≤10100000)<br><strong>输出：</strong><br>对于每组数据，Yes 表示 n 是若干个 2050 依次拼接起来的，No 表示不是。<br><strong>样例：</strong><br>2<br>2050<br>205020<br><strong>答案：</strong><br>Yes<br>No<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	for(int w=0;w&lt;n;w++)&#123;</span><br><span class="line">		string a;</span><br><span class="line">		cin&gt;&gt;a;</span><br><span class="line">		int l=a.size();</span><br><span class="line">		if(l%4!=0)&#123;</span><br><span class="line">			cout&lt;&lt;&quot;No&quot;&lt;&lt;endl;continue;</span><br><span class="line">		&#125;</span><br><span class="line">		bool y=0;</span><br><span class="line">		for(int i=0;i&lt;l;i++)&#123;</span><br><span class="line">			if(i%4==0)&#123;</span><br><span class="line">				if(a[i]!=&apos;2&apos;)&#123;</span><br><span class="line">					y=1;break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			else if(i%4==1)&#123;</span><br><span class="line">				if(a[i]!=&apos;0&apos;)&#123;</span><br><span class="line">					y=1;break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			else if(i%4==2)&#123;</span><br><span class="line">				if(a[i]!=&apos;5&apos;)&#123;</span><br><span class="line">					y=1;break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			else if(i%4==0)&#123;</span><br><span class="line">				if(a[i]!=&apos;0&apos;)&#123;</span><br><span class="line">					y=1;break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		if(y)&#123;</span><br><span class="line">				cout&lt;&lt;&quot;No&quot;&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				cout&lt;&lt;&quot;Yes&quot;&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="1002-时间间隔"><a href="#1002-时间间隔" class="headerlink" title="1002 时间间隔"></a>1002 时间间隔</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>被坑了！！！一开始浏览题目的时候以为是个（特别）麻烦的模拟，就先跳过了，之后回来再写的时候就没细想，写到一半突然发现一整天的秒数是整百的，而最后结果要对100取模，所以根本不用计算天数！！浪费了好多时间QAQ哭了。。。</p>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>2019年1月1日，在云栖出现了可能是全世界最长的以秒为单位的倒计时装置：九亿多秒倒计时，直到2050年。<br>给出一个时间S，我们想知道S距离2050年1月1日0点0时0分多少秒。<br>因为答案可能很大，请输出答案模100的值。<br><strong>输入：</strong><br>第一行一个正整数 T (1≤T≤100000) 表示数据组数。<br>对于每组数据，一行一个字符串表示时间。<br>时间格式为：YYYY-MM-DD HH:MM:SS，分别表示年、月、日、时，分、秒。<br>输入的时间保证都在2019年1月1日以后（包含当天）。<br><strong>输出：</strong><br>对于每组数据输出一行一个整数表示答案。<br><strong>样例：</strong><br>1<br>2019-01-01 00:00:00<br><strong>答案：</strong><br>0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int T;</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	for(int w=0;w&lt;T;w++)&#123;</span><br><span class="line">		string a,b;</span><br><span class="line">		cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">		int year,month,day,hh,mm,ss;</span><br><span class="line">		hh=(b[0]-&apos;0&apos;)*10+b[1]-&apos;0&apos;;</span><br><span class="line">		mm=(b[3]-&apos;0&apos;)*10+b[4]-&apos;0&apos;;</span><br><span class="line">		ss=(b[6]-&apos;0&apos;)*10+b[7]-&apos;0&apos;;</span><br><span class="line">		int ans=hh*60*60+mm*60+ss;</span><br><span class="line">		ans=86400-ans;</span><br><span class="line">		ans%=100;</span><br><span class="line">		cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="1003-分宿舍"><a href="#1003-分宿舍" class="headerlink" title="1003 分宿舍"></a>1003 分宿舍</h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>比赛时以为是（非常麻烦）的分类讨论，于是想了很久，emmmm。。。其实直接暴力就完事儿了QAQ还有注意一下数很大，干脆都用long long就好了。<br>【以后注意试一下最大值到底会不会爆，不要总是想当然，懒得试。。。】</p>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>2050的线下活动吸引了很多心怀梦想的年轻人。<br>小伙们打算组团去参加。他们一共有 n+m+2k 个人，包括 n+k 个男生，m+k 个女生，其中 k 对男女生为异性情侣，现在他们要找房间住。房间有三种类型，双人间 a 元一间，三人间 b 元一间，这两种只能同性一起住。情侣间能住一对异性情侣，一间 c 元。除了情侣间以外，其他房间都可以不住满。<br>求最少花多少钱，能让小伙伴们都有地方住。<br><strong>输入：</strong><br>第一行一个整数 T (1≤T≤50) 表示数据组数。<br>接下来 T 组数据，每组数据一行 6 个整数 n,m,k,a,b,c，其中0≤n,m,k≤10^3,0≤a,b,c≤10^9。<br><strong>输出：</strong><br>对于每组数据输出一行一个数，表示所有人住下来所需要的最小花费。<br><strong>样例：</strong><br>2<br>3 0 1 1 3 3<br>3 3 2 1 6 2<br><strong>答案：</strong><br>3<br>6<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#define INF 0x3f3f3f3f3f3f3f3f</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int T;</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	for(int w=0;w&lt;T;w++)&#123;</span><br><span class="line">		long long int n,m,k,a,b,c;</span><br><span class="line">		cin&gt;&gt;n&gt;&gt;m&gt;&gt;k&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">		long long int min=INF;</span><br><span class="line">		for(int i=0;i&lt;=k;i++)&#123;</span><br><span class="line">			long long int nn=n+k-i,mm=m+k-i;</span><br><span class="line">			long long int ans=i*c;</span><br><span class="line">			long long int nnmax=nn/2,mmmax=mm/2;</span><br><span class="line">			if(nn%2==1)nnmax+=1;if(mm%2==1)mmmax+=1;</span><br><span class="line">			long long int nnans=INF,mmans=INF;</span><br><span class="line">			for(int j=0;j&lt;=nnmax;j++)&#123;</span><br><span class="line">				long long int ans1=j*a;</span><br><span class="line">				long long int nn2=nn-j*2;</span><br><span class="line">				if(nn2%3==1)nn2+=2;</span><br><span class="line">				else if(nn2%3==2)nn2+=1;</span><br><span class="line">				ans1+=(nn2/3)*b;</span><br><span class="line">				if(ans1&lt;nnans)nnans=ans1;</span><br><span class="line">			&#125;</span><br><span class="line">			for(int j=0;j&lt;=mmmax;j++)&#123;</span><br><span class="line">				long long int ans1=j*a;</span><br><span class="line">				long long int mm2=mm-j*2;</span><br><span class="line">				if(mm2%3==1)mm2+=2;</span><br><span class="line">				else if(mm2%3==2)mm2+=1;</span><br><span class="line">				ans1+=(mm2/3)*b;</span><br><span class="line">				if(ans1&lt;mmans)mmans=ans1;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><br><span class="line">			ans+=nnans+mmans;</span><br><span class="line">			if(ans&lt;min)min=ans;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">		cout&lt;&lt;min&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="1004-PASS"><a href="#1004-PASS" class="headerlink" title="1004 PASS"></a>1004 PASS</h2><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>先求每个学校有多少人，再算每个学校x/k的人数（向下取整），之后再从头循环到一半人数，看循环到他的时候他还在不在学校x/k人之中。其实就是模拟了一遍吧，很简单啦~</p>
+<h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>有 n 个选手参加了 2050 编程竞赛，他们属于 m 个学校，学校的编号为 1 到 m，2050 编程竞赛的 PASS 奖励资格如下：对于一个学校，如果它有 x 个学生参赛，它的参赛学生里成绩最好的[x/k]人里，每有一个人总排名在前 50% 内（包括50%），就奖励一个 PASS。<br>现在给出每个选手所属的学校和它的排名（假设没有平手），请你帮主办方算一下一共发出了几个 PASS。<br><strong>输入：</strong><br>第一行一个正整数 T (1≤T≤10) 表示数据组数。<br>接下来 T 组数据，对于每组数据：<br>第一行三个正整数 n,m,k (1≤n≤10^4,1≤m≤10^3,2≤k≤20)。<br>第二行 n 个数，按照成绩从好到差给出 n 个选手所属的学校。<br><strong>输出：</strong><br>对于每组数据输出一行一个整数表示答案。<br><strong>样例：</strong><br>1<br>2019-01-01 00:00:00<br><strong>答案：</strong><br>0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int T;</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	for(int w=0;w&lt;T;w++)&#123;</span><br><span class="line">		string a,b;</span><br><span class="line">		cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">		int year,month,day,hh,mm,ss;</span><br><span class="line">		hh=(b[0]-&apos;0&apos;)*10+b[1]-&apos;0&apos;;</span><br><span class="line">		mm=(b[3]-&apos;0&apos;)*10+b[4]-&apos;0&apos;;</span><br><span class="line">		ss=(b[6]-&apos;0&apos;)*10+b[7]-&apos;0&apos;;</span><br><span class="line">		int ans=hh*60*60+mm*60+ss;</span><br><span class="line">		ans=86400-ans;</span><br><span class="line">		ans%=100;</span><br><span class="line">		cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>未完待续~~（也可能不续了hhh）</p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/04/16/2050-Programming-Competition/">2050 Programming Competition</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/09/最短路练习/">最短路练习</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/13/B-Circus/">B Circus</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/12/C-Skyscrapers/">C-Skyscrapers</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/11/A-Sushi-for-Two/">A Sushi for Two</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Cf-Round-545-Div-2/">Cf Round 545 (Div. 2)</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Cf-Round-545-Div-2/" style="font-size: 10px;">Cf Round 545 (Div. 2)</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 小乔QvQ
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="bg"></div>
+</body>
+</html>
