@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CF Round #552(Div.3) | 一起喵喵喵喵喵~</title>
+  <meta name="author" content="小乔QvQ">
+
+  
+  <meta name="description" content="上分啦！！！终于又回到了1400以上QAQ感动天地div3果然还是简单，出了四个题，虽然又犯傻的wa了两次，但问题不大，E没写完有点难受了，其实也不难的。总之希望下一次不要又掉分掉回去就好，加油加油！！">
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="CF Round #552(Div.3)">
+  <meta property="og:site_name" content="一起喵喵喵喵喵~">
+
+  
+  
+
+  
+    <meta property="og:image" content="">
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <link rel="alternate" href="/atom.xml" title="一起喵喵喵喵喵~" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">一起喵喵喵喵喵~</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-04-16T08:30:46.000Z"><a href="/2019/04/16/CF-Round-552-Div-3/">2019-04-16</a></time>
+      
+      
+  
+    <h1 class="title">CF Round #552(Div.3)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>上分啦！！！终于又回到了1400以上QAQ感动天地<br>div3果然还是简单，出了四个题，虽然又犯傻的wa了两次，但问题不大，E没写完有点难受了，其实也不难的。总之希望下一次不要又掉分掉回去就好，加油加油！！<br><a id="more"></a></p>
+<h1 id="A-Sushi-for-Two"><a href="#A-Sushi-for-Two" class="headerlink" title="A Sushi for Two"></a>A Sushi for Two</h1><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>已知a+b, a+c, b+c和a+b+c，于是：b=（a+b）+（b+c)-(a+b+c)<br>以此类推可以算出a，b，c的值，但是要注意a+b, a+c, b+c和a+b+c不是按顺序的，所以要找出最大值为a+b+c，之后就可以了。一遍过啦，很开心~</p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>波利卡普已经猜中了三个正整数a、b和c。他对这些数字保密，但他在黑板上以任意顺序写下了四个数字——它们的成对和(三个数字)和所有三个数字的和(一个数字)。所以，在黑板上有四个随机的数字:a+b, a+c, b+c和a+b+c。<br>你必须用给定的数字猜出三个数字a、b和c。按任意顺序打印三个猜测的整数。<br>注意一些给定的数字a、b和c可以相等(也有可能a=b=c)。<br><strong>输入：</strong><br>输入的唯一一行包含四个正整数x1、x2、x3、x4(2≤xi≤10^9)——按随机顺序写在黑板上的数字。它保证对于给定的数x1 x2 x3 x4，答案是存在的。<br><strong>输出：</strong><br>打印这样的正整数a, b和c，四个写在黑板上的数字是按一定顺序写的值a+b, a+c, b+c和a+b+c。按任意顺序打印a、b和c。如果有几个答案，你可以打印任何一个。答案是肯定存在的。<br><strong>样例：</strong><br>3 6 5 4<br><strong>答案：</strong><br>2 1 3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int x1,x2,x3,x4;</span><br><span class="line">	cin&gt;&gt;x1&gt;&gt;x2&gt;&gt;x3&gt;&gt;x4;</span><br><span class="line">	int max1;</span><br><span class="line">	max1=max(x1,x2);</span><br><span class="line">	max1=max(max1,x3);</span><br><span class="line">	max1=max(max1,x4);</span><br><span class="line">	int a,b,c;</span><br><span class="line">	int xx1,xx2,xx3;</span><br><span class="line">	if(max1==x1)&#123;</span><br><span class="line">		xx1=x2;xx2=x3;xx3=x4;</span><br><span class="line">	&#125;</span><br><span class="line">	if(max1==x2)&#123;</span><br><span class="line">		xx1=x1;xx2=x3;xx3=x4;</span><br><span class="line">	&#125;</span><br><span class="line">	if(max1==x3)&#123;</span><br><span class="line">		xx1=x1;xx2=x2;xx3=x4;</span><br><span class="line">	&#125;</span><br><span class="line">	if(max1==x4)&#123;</span><br><span class="line">		xx1=x1;xx2=x2;xx3=x3;</span><br><span class="line">	&#125;</span><br><span class="line">	a=xx1+xx2-max1;</span><br><span class="line">	b=xx1+xx3-max1;</span><br><span class="line">	c=xx2+xx3-max1;</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;c&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="B-Make-Them-Equal"><a href="#B-Make-Them-Equal" class="headerlink" title="B Make Them Equal"></a>B Make Them Equal</h1><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>总体思路就是找到这个序列的max和min，求max和min的中间值，如果max+min为奇数则中间值不是整数，就不存在，否则就循环一圈，没问题答案就是max-中间值。于是就立刻wa了一发，哭了。发现没有考虑到类似[7,10,10]这样的情况，因为可以选择不加也不减D，所以这种情况也是可以的，改了之后就过了。</p>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>你得到一个序列a1 a2…，一个由n个整数组成的序列。<br>您可以选择任何非负整数D(即D≥0)，对于每一个ai你可以:添加D(只有一次)，即。执行ai:=ai+D，或减去D(只有一次)，即。执行ai:=ai - D，或者保持ai的值不变。<br>在一次操作之后，ai值有可能变为负值。<br>您的目标是选择这样一个最小的非负整数D并以这样一种方式执行更改，即所有ai都是相等的(即a1=a2=⋯⋯=an)。<br>打印所需的D，如果无法选择这样的值D，则打印-1。<br>例如，对于数组[2,8]，值D=3是最小可能的，因为如果将D添加到2，就可以获得数组[5,5]<br>8减去D。对于数组[1,4,7,7]，D=3也是最小可能值。你可以把它加到1上，然后从7中减去它，得到数组[4,4,4,4]。<br><strong>输入：</strong><br>输入的第一行包含一个整数n(1≤n≤100)——a中的元素个数。<br>输入的第二行包含n个整数a1,a2，…，an(1≤ai≤100)——序列a。<br><strong>输出：</strong><br>打印一个整数——最小的非负整数值D，这样，如果你把这个值加到某个ai上，从某个ai中减去这个值，让某个ai保持不变，所有得到的值都相等。<br>如果无法选择这样的值D，则打印-1。<br><strong>样例：</strong><br>6<br>1 4 4 7 4 1<br><strong>答案：</strong><br>3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#define INF 0x3f3f3f3f</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	int a[n];</span><br><span class="line">	int max=0,min=INF;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">		if(a[i]&gt;max)max=a[i];</span><br><span class="line">		if(a[i]&lt;min)min=a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	bool y=1;</span><br><span class="line">	if((max+min)%2!=0)&#123;</span><br><span class="line">		for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">			if(a[i]!=max&amp;&amp;a[i]!=min)&#123;</span><br><span class="line">				cout&lt;&lt;-1&lt;&lt;endl;exit(0);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;max-min&lt;&lt;endl;exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">	int x=(max+min)/2;</span><br><span class="line">	int ans=x-min;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		if(((a[i]+ans)!=x)&amp;&amp;((a[i]-ans)!=x)&amp;&amp;(a[i]!=x))&#123;</span><br><span class="line">			cout&lt;&lt;-1&lt;&lt;endl;exit(0);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="C-Gourmet-Cat"><a href="#C-Gourmet-Cat" class="headerlink" title="C Gourmet Cat"></a>C Gourmet Cat</h1><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>这题做的时候有点急躁了，wa了一发，其实应该再好好想想的。主要思路就是把整周的3a2b2b先去掉，剩下的暴力一下哪天开始。代码修修补补的，就是做的时候有点太着急了，写的也乱七八糟，随便看看吧。</p>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>波利卡普有一只猫，他的猫是一个真正的美食家!根据一周中的某一天，他吃某种食物:<br>星期一、四、星期日他吃鱼;<br>星期二和星期六他吃炖兔肉;<br>在一周的其他日子里，他吃鸡肉桩。<br>波利卡准备去旅行，他已经收拾好背包。他的背包里有:每日定量的鱼粮;b每日定量的炖兔肉;c每天的鸡肉份额。<br>波利卡不得不选择一周中的某一天开始他的旅行，这样他的猫就可以尽可能长时间不用额外购买食物。如果波利卡选择一周中的哪一天开始他的旅行，打印出猫在一次旅行中不需要额外购买食物就可以吃的最大天数。<br><strong>输入：</strong><br>输入的第一行包含三个正整数a, b和c (≤1 a, b, c≤7⋅10^8)——每日口粮的鱼类食品的数量,炖兔子和鸡公元背包相应的股权。<br><strong>输出：</strong><br>如果波利卡选择一周中的哪一天开始他的旅行，打印出猫在一次旅行中不需要额外购买食物就可以吃的最大天数<br><strong>样例：</strong><br>2 1 1<br><strong>答案：</strong><br>4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int xing[7]=&#123;1,2,3,1,3,2,1&#125;;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int a,b,c;</span><br><span class="line">	cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">	int ans=0;</span><br><span class="line">	if(a&gt;=9&amp;&amp;b&gt;=6&amp;&amp;c&gt;=6)&#123;</span><br><span class="line">		int aa=a/3,bb=b/2,cc=c/2;</span><br><span class="line">		int zhou=min(min(aa,bb),cc)-2;</span><br><span class="line">		a-=zhou*3;b-=zhou*2;c-=zhou*2;</span><br><span class="line">		for(int i=0;i&lt;7;i++)&#123;</span><br><span class="line">		int a1=a,b1=b,c1=c;</span><br><span class="line">		int ans1=0;</span><br><span class="line">		for(int j=i;;j++)&#123;</span><br><span class="line">			if(j==7)j=0;</span><br><span class="line">			if(xing[j]==1)&#123;</span><br><span class="line">				if(a1==0)break;</span><br><span class="line">				ans1++;a1--;</span><br><span class="line">			&#125;</span><br><span class="line">			if(xing[j]==2)&#123;</span><br><span class="line">				if(b1==0)break;</span><br><span class="line">				ans1++;b1--;</span><br><span class="line">			&#125;</span><br><span class="line">			if(xing[j]==3)&#123;</span><br><span class="line">				if(c1==0)break;</span><br><span class="line">				ans1++;c1--;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if(ans1&gt;ans)ans=ans1;</span><br><span class="line">	&#125;</span><br><span class="line">	ans+=zhou*7;</span><br><span class="line">		cout&lt;&lt;ans&lt;&lt;endl;exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	for(int i=0;i&lt;7;i++)&#123;</span><br><span class="line">		int a1=a,b1=b,c1=c;</span><br><span class="line">		int ans1=0;</span><br><span class="line">		for(int j=i;;j++)&#123;</span><br><span class="line">			if(j==7)j=0;</span><br><span class="line">			if(xing[j]==1)&#123;</span><br><span class="line">				if(a1==0)break;</span><br><span class="line">				ans1++;a1--;</span><br><span class="line">			&#125;</span><br><span class="line">			if(xing[j]==2)&#123;</span><br><span class="line">				if(b1==0)break;</span><br><span class="line">				ans1++;b1--;</span><br><span class="line">			&#125;</span><br><span class="line">			if(xing[j]==3)&#123;</span><br><span class="line">				if(c1==0)break;</span><br><span class="line">				ans1++;c1--;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if(ans1&gt;ans)ans=ans1;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="D-Walking-Robot"><a href="#D-Walking-Robot" class="headerlink" title="D Walking Robot"></a>D Walking Robot</h1><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>0就先用b，1就先用a，1的时候b要是满了就先用b。意外的简单呢，一发入魂，开心~</p>
+<h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>在X=0处有一个机器人在Ox轴上。他必须走到X=n。你控制着这个机器人，控制着它的行动。机器人有一个电池和一个带有太阳能电池板的蓄电池。<br>路径的第i段(从X=i−1到X=i)可以暴露在阳光下，也可以不暴露在阳光下。数组s表示哪些段暴露在阳光下:如果段i暴露，则si=1，否则si=0。<br>机器人有一个容量为b的电池和一个容量为a的蓄电池。对于每一段，你应该选择哪种储能机器人将使用到下一个点(它可以是电池或蓄电池)。如果机器人使用电池，电池的电流就会减少1(如果机器人的电量为零，就不能使用电池)。如果机器人使用蓄电池，蓄电池的电流会减少1(如果充电为零，机器人也不能使用蓄电池)。<br>如果电流段暴露在阳光下，机器人使用电池穿过电流段，蓄电池的充电量就会增加1(当然，蓄电池的充电量不能超过最大容量)。<br>如果蓄电池通过某一段，无论该段是否暴露，其电荷都会减少1。<br>你知道不可能一直走到X=n。你希望你的机器人走得越远越好。找出机器人可以通过的最大段距离，如果你最优地控制他。<br><strong>输入：</strong><br>输入的第一行包含三个整数n, b, a (1≤n b≤2⋅105)——机器人的目标点,电池容量和蓄电池容量。<br>输入的第二行包含n个整数s1,s2，…，sn(0≤si≤1)，其中第i段距离暴露在阳光下si为1，否则为0。<br><strong>输出：</strong><br>打印一个整数——如果你最优地控制机器人，它能通过的最大段数。<br><strong>样例：</strong><br>5 2 1<br>0 1 0 1 0<br><strong>答案：</strong><br>5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n,a,b;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;a&gt;&gt;b;</span><br><span class="line">	int bmax=b;</span><br><span class="line">	int x;</span><br><span class="line">	int ans=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;x;</span><br><span class="line">		if(!x)&#123;</span><br><span class="line">			if(b!=0)&#123;</span><br><span class="line">				ans++;b-=1;</span><br><span class="line">			&#125;</span><br><span class="line">			else if(a!=0)&#123;</span><br><span class="line">				ans++;a-=1;</span><br><span class="line">			&#125;</span><br><span class="line">			else break;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(x)&#123;</span><br><span class="line">			if(a!=0&amp;&amp;b&lt;bmax)&#123;</span><br><span class="line">				ans++;a-=1;b+=1;</span><br><span class="line">			&#125;</span><br><span class="line">			else if(b==bmax)&#123;</span><br><span class="line">				ans++;b-=1;</span><br><span class="line">			&#125;</span><br><span class="line">			else if(a==0&amp;&amp;b!=0)&#123;</span><br><span class="line">				ans++;b-=1;</span><br><span class="line">			&#125;</span><br><span class="line">			else if(a==0&amp;&amp;b==0)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="E-Two-Teams"><a href="#E-Two-Teams" class="headerlink" title="E Two Teams"></a>E Two Teams</h1><h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><p>其实就用个双向链表就完事儿了。这题主要怪我自己对链表莫名的抵触心理，总是想绕过它用数组或者stl的容器之类的，想的就很麻烦，浪费好多时间，结果就没写完，不然能涨更多分的，生气气！！！回来补题时用链表一写很快就过了，哼！还是平时用链表用的少，就有点不敢写，其实没有想象中那么麻烦的，果断一点啊！！</p>
+<h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a>题目</h3><p>有n个学生站成一排。两个教练组成两个队——第一个教练选择第一个队，第二个教练选择第二个队。<br>第i名学生具有整数编程技能。所有的编程技能都是不同的，包括1到n。<br>首先,第一个教练会选择最大编程技能的学生在所有学生不带进任何团队,和k最近他和k最左边的学生他的右边(如果有不到k学生向左或向右,都将被选中)。所有被选中的学生离开这一行，加入一队。其次，第二个教练也会这么做(但是他选择的所有学生都会加入第二个队)。然后第一个教练会做出这样的动作，以此类推。这样重复，直到行变为空(即。当每个学生成为某个团队的一员时，这个过程就结束了)。<br>你的问题是决定哪些学生将进入一队，哪些学生将进入第二队。<br><strong>输入：</strong><br>输入的第一行包含两个整数n和k (k 1≤≤n≤2⋅105)——学生的数量和价值确定的范围选择学生在每个移动,分别。<br>输入的第二行包含n个整数a1,a2，…，an(1≤ai≤n)，其中ai是第i个学生的编程技能。可以保证所有的编程技能都是不同的。<br><strong>输出：</strong><br>打印一个n个字符的字符串;如果第i个学生加入一队，第i个字符应该是1，否则为2。<br><strong>样例：</strong><br>5 1<br>2 1 3 5 4<br><strong>答案：</strong><br>22111<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;set&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct node&#123;</span><br><span class="line">	int date;</span><br><span class="line">	int num;</span><br><span class="line">	int last;</span><br><span class="line">	int next;</span><br><span class="line">	friend bool operator &lt;(node x,node y)&#123;</span><br><span class="line">		return x.date&gt;y.date;</span><br><span class="line">	&#125;</span><br><span class="line">	   </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">	int n,k;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line">	int stu[n],ans[n]=&#123;0&#125;;</span><br><span class="line">	set&lt;node&gt;s;</span><br><span class="line">	node x[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;stu[i];</span><br><span class="line">		x[i].date=stu[i];</span><br><span class="line">		x[i].num=i;</span><br><span class="line">		if(i!=n-1)x[i].next=i+1;</span><br><span class="line">		else x[i].next=-1;</span><br><span class="line">		if(i!=0)x[i].last=i-1;</span><br><span class="line">		else x[i].last=-1;</span><br><span class="line">		s.insert(x[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	int team=1;</span><br><span class="line">	set&lt;node&gt;::iterator it;</span><br><span class="line">	for(int w=0;;w++)&#123;</span><br><span class="line">		</span><br><span class="line">		team=w%2+1;</span><br><span class="line">		it=s.begin();</span><br><span class="line">		node itt=*it;</span><br><span class="line">		node zhong=x[itt.num];</span><br><span class="line">		node now=zhong;</span><br><span class="line">		for(int i=0;i&lt;k;i++)&#123;</span><br><span class="line">			if(zhong.next==-1)break;</span><br><span class="line">			node xx=x[now.next];</span><br><span class="line">			ans[xx.num]=team;</span><br><span class="line">			s.erase(xx);</span><br><span class="line">			if(xx.next==-1||i==k-1)&#123;</span><br><span class="line">				zhong.next=xx.next;break;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				now=xx;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		now=zhong;</span><br><span class="line">		for(int i=0;i&lt;k;i++)&#123;</span><br><span class="line">			if(zhong.last==-1)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			node xx=x[now.last];</span><br><span class="line">			ans[xx.num]=team;</span><br><span class="line">			s.erase(xx);</span><br><span class="line">			if(xx.last==-1||i==k-1)&#123;</span><br><span class="line">				zhong.last=xx.last;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				now=xx;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		ans[zhong.num]=team;</span><br><span class="line">		if(zhong.next!=-1)&#123;</span><br><span class="line">			x[zhong.next].last=zhong.last;</span><br><span class="line">		&#125;</span><br><span class="line">		if(zhong.last!=-1)&#123;</span><br><span class="line">			x[zhong.last].next=zhong.next;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		s.erase(zhong);</span><br><span class="line">		if(s.empty())break;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cout&lt;&lt;ans[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/04/16/2050-Programming-Competition/">2050 Programming Competition</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/16/CF-Round-552-Div-3/">CF Round #552(Div.3)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/09/最短路练习/">最短路练习</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/08/CF-Round-545-Div-2/">CF Round 545(Div 2)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/02/01/第一篇博客/">第一篇博客</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 小乔QvQ
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="bg"></div>
+</body>
+</html>
