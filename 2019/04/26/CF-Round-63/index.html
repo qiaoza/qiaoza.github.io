@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Educational Codeforces Round 63 (Rated for Div. 2) | 一起喵喵喵喵喵~</title>
+  <meta name="author" content="小乔QvQ">
+
+  
+  <meta name="description" content="掉分了QAQ掉了33分，在变绿的边缘疯狂试探！前两题出的挺快，还以为能上分呢，结果第三题一直理解错了题意，想半天想不出来，气哭了QAQ">
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Educational Codeforces Round 63 (Rated for Div. 2)">
+  <meta property="og:site_name" content="一起喵喵喵喵喵~">
+
+  
+  
+
+  
+    <meta property="og:image" content="">
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <link rel="alternate" href="/atom.xml" title="一起喵喵喵喵喵~" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">一起喵喵喵喵喵~</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-04-26T06:41:49.000Z"><a href="/2019/04/26/CF-Round-63/">2019-04-26</a></time>
+      
+      
+  
+    <h1 class="title">Educational Codeforces Round 63 (Rated for Div. 2)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>掉分了QAQ掉了33分，在变绿的边缘疯狂试探！<br>前两题出的挺快，还以为能上分呢，结果第三题一直理解错了题意，想半天想不出来，气哭了QAQ<br><a id="more"></a></p>
+<h1 id="A-Reverse-a-Substring"><a href="#A-Reverse-a-Substring" class="headerlink" title="A Reverse a Substring"></a>A Reverse a Substring</h1><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>只要找到字符串中的连续两个字符前面的大于后面的，就说明可以，于是输出yes并交换他们俩，如果找不到，输出NO。  </p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个由n个小写拉丁字母组成的字符串s。<br>让我们将子字符串定义为字符串的连续子段。例如，“acab”是“abacaba”的子字符串(它从位置3开始，以位置6结束)，但是“aa”或“d”不是这个字符串的子字符串。所以从位置l到位置r的字符串s的子字符串是s[l;r]=slsl+1…sr。<br>您必须精确地选择给定字符串的一个子字符串并将其反转(即。使s[l;r]=srsr - 1…注意，没有必要获取最小可能的字符串。<br>如果无法反转给定字符串的某些子字符串以获得更小的字符串，则打印“NO”。否则打印“YES”和任何合适的子字符串。<br>字符串x在词典上小于字符串y，如果x是y的前缀(且x≠y)，或者存在i(1≤i≤min(|x|，|y|))，则xi&lt;yi，对于任意j(1≤j) xj=yj。这里|a|表示字符串a的长度。字符串的字典比较是由现代编程语言中的操作符&lt;实现的。<br><strong>输入：</strong><br>输入的第一行包含一个整数n (2≤n≤3⋅10^5) - s的长度。<br>输入的第二行包含长度为n的字符串s，仅由小写拉丁字母组成。<br><strong>输出：</strong><br>如果无法对给定字符串的某些子字符串进行反转以获得词法上更少的字符串，则打印“NO”。否则打印“YES”和两个索引l和r(1≤l&lt;r≤n)，表示必须反转的子字符串。如果有多个答案，可以打印任何一个。<br><strong>样例：</strong><br>7<br>abacaba<br><strong>答案：</strong><br>YES<br>2 5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	string a;</span><br><span class="line">	cin&gt;&gt;a;</span><br><span class="line">	bool y=0;</span><br><span class="line">	for(int i=0;i&lt;n-1;i++)&#123;</span><br><span class="line">		if(a[i]&gt;a[i+1])&#123;</span><br><span class="line">			y=1;cout&lt;&lt;&quot;YES&quot;&lt;&lt;endl;</span><br><span class="line">			cout&lt;&lt;i+1&lt;&lt;&apos; &apos;&lt;&lt;i+2&lt;&lt;endl;</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	if(!y)&#123;</span><br><span class="line">		cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="B-Game-with-Telephone-Numbers"><a href="#B-Game-with-Telephone-Numbers" class="headerlink" title="B Game with Telephone Numbers"></a>B Game with Telephone Numbers</h1><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>最后10位是什么没关系，就看这串序列前面的位数中有几个8，如果超过（n-11）/2，则Vasya获胜。  </p>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>电话号码是由11位数字组成的序列，其第一个数字是8。<br>瓦斯亚和彼佳在玩游戏。最初它们有一个长度为n(n是奇数)的字符串，由数字组成。瓦斯亚先走一步，然后玩家轮流。玩家必须选择一个字符并将其从当前字符串中删除。例如，如果当前的字符串1121，在玩家移动之后它可能是112、111或121。当字符串长度s变为11时，游戏结束。如果得到的字符串是电话号码，则Vasya获胜，否则Petya获胜。<br>你必须确定Vasya是否有获胜的策略(也就是说，无论Petya在移动过程中选择了哪个角色，Vasya是否能够赢得游戏)。<br><strong>输入：</strong><br>第一行包含一个整数n(13≤n&lt;105,n为奇数)——字符串的长度s。<br>第二行包含字符串s(|s|=n)，它只由十进制数字组成。<br><strong>输出：</strong><br>If Vasya has a strategy that guarantees him victory, print YES.<br>Otherwise print NO.<br><strong>样例：</strong><br>13<br>8380011223344<br><strong>答案：</strong><br>YES<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	string a;</span><br><span class="line">	cin&gt;&gt;a;</span><br><span class="line">	int k=n-11;</span><br><span class="line">	k/=2;</span><br><span class="line">	int sum=0;</span><br><span class="line">	for(int i=0;i&lt;(n-10);i++)&#123;</span><br><span class="line">		if(a[i]==&apos;8&apos;)&#123;</span><br><span class="line">			sum+=1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	if(sum&gt;k)&#123;</span><br><span class="line">		cout&lt;&lt;&quot;YES&quot;&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="C-Alarm-Clocks-Everywhere"><a href="#C-Alarm-Clocks-Everywhere" class="headerlink" title="C Alarm Clocks Everywhere"></a>C Alarm Clocks Everywhere</h1><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>一直理解错题解了，结果最后没做出来，难过QAQ本来很简单的，做出来肯定上分了<br>对x数组求差，之后对所有差求GCD，再暴力查找p数组有没有GCD%p[i]==0。若有：输出YES，y就等于x[0]，j就是i+1;若没有输出NO。  </p>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>伊凡现在要睡觉了，他想设定闹钟。明天有许多必要的活动，第i项将在第11分钟开始。伊凡不想跳过任何事件,所以他必须把他的闹钟,这样环在分钟x1, x2,…, xn,所以他将在每一个分钟清醒(注意,这并不重要,如果他的闹钟将环在其他任何分钟)。<br>伊万可以选择两个属性闹钟-第一分钟将环(表示这是y)和连续两个信号之间的时间间隔(p)表示吧。时钟被设置后,将环在分钟y, y + p + 2 p y + 3 p等等。<br>Ivan可以选择任意分钟作为第一个分钟，但是他不能选择任意的p值。他必须在给定的值p1,p2，…，pm中选择它(他的手机不支持任何其他设置选项)。<br>所以伊万选择第一分钟y当闹钟应该开始响了,连续两个信号之间的时间间隔pj以这样一种方式,它将环在给定分钟x1, x2,…, xn(和它并不重要,如果他的闹钟将环在其他任何分钟)。<br>你的任务是告诉第一个分钟y和索引j，这样如果Ivan用属性y和pj设置他的闹钟，它会在所有给定的分钟x1、x2、…、xn内响起，或者说不可能选择给定属性的这些值。如果有多个答案，可以打印任何一个。<br><strong>输入：</strong><br>入的第一行包含两个整数n和m (2≤n≤3⋅10^5, 1≤≤3⋅10^5) -事件的数量和可能的设置数量,信号之间的时间间隔。<br>输入的第二行包含n个整数x1,x2，…，xn(1≤xi≤10^18)，其中xi为第i个事件开始的分钟。它保证所有xi都是按递增的顺序给出的。条件x1&lt;x2&lt;⋯⋯&lt;xn成立)。<br>输入的第三行包含m个整数p1,p2，…，pm(1≤pj≤10^18)，其中pj为两个连续信号间隔的第j个选项。<br><strong>输出：</strong><br>如果不可能选择这样的值y和j，因此满足所有约束，那么在第一行中打印“NO”。<br>否则在第一行打印“YES”。然后打印两个整数y(1≤y≤10^18)和j (1≤j≤m)在第二行,y是伊凡第一分钟的闹钟应该开始振铃和j的指数选择连续两个信号之间的时间间隔(选项编号从1米他们给出的顺序输入)。这些值的选择应该使闹钟在给定的x1、x2、……、xn分钟内都能响起。如果有多个答案，可以打印任何一个。<br><strong>样例：</strong><br>3 5<br>3 12 18<br>2 6 5 3 3<br><strong>答案：</strong><br>YES<br>3 4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt; </span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n,m;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	long long int x[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;x[i];</span><br><span class="line">	&#125;</span><br><span class="line">	long long int p[m];</span><br><span class="line">	for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">		cin&gt;&gt;p[i];</span><br><span class="line">	&#125;</span><br><span class="line">	long long int g=x[1]-x[0];</span><br><span class="line">	for(int i=2;i&lt;n;i++)&#123;</span><br><span class="line">		g=__gcd(x[i]-x[i-1],g);</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">		if(g%p[i]==0)&#123;</span><br><span class="line">			cout&lt;&lt;&quot;YES&quot;&lt;&lt;endl;</span><br><span class="line">			cout&lt;&lt;x[0]&lt;&lt;&apos; &apos;&lt;&lt;i+1&lt;&lt;endl;exit(0);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/04/26/CF-Round-63/">Educational Codeforces Round 63 (Rated for Div. 2)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/16/CF-Round-552-Div-3/">CF Round #552(Div.3)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/13/2050-Programming-Competition/">2050 Programming Competition</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/09/最短路练习/">最短路练习</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/08/CF-Round-545-Div-2/">CF Round 545(Div 2)</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 小乔QvQ
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="bg"></div>
+</body>
+</html>
