@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CF Round #560(Div.3) | 一起喵喵喵喵喵~</title>
+  <meta name="author" content="小乔QvQ">
+
+  
+  <meta name="description" content="上分啦！+56！终于回到1500以上了，开心！div3果然更容易上分，稳住就好！加油加油！">
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="CF Round #560(Div.3)">
+  <meta property="og:site_name" content="一起喵喵喵喵喵~">
+
+  
+  
+
+  
+    <meta property="og:image" content="">
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <link rel="alternate" href="/atom.xml" title="一起喵喵喵喵喵~" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">一起喵喵喵喵喵~</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-05-14T05:54:06.000Z"><a href="/2019/05/14/CF-Round-560-Div-3/">2019-05-14</a></time>
+      
+      
+  
+    <h1 class="title">CF Round #560(Div.3)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>上分啦！+56！终于回到1500以上了，开心！div3果然更容易上分，稳住就好！加油加油！<br><a id="more"></a></p>
+<h1 id="A-Remainder"><a href="#A-Remainder" class="headerlink" title="A Remainder"></a>A Remainder</h1><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>使最后y位除了倒数（x+1）位为1，其余为0。<br>以后一定要注意，改错的时候不要漏掉！！改了一个地方就不管了！！白白WA了一发，嘤嘤嘤</p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>你得到一个由n位组成的巨大的十进制数。它保证这个数字没有前导零。这个数字的每一位不是0就是1。<br>您可以使用这个数字执行几个(可能为零)操作。在每次操作中，您可以更改您的号码的任何数字;你可以把0变成1或者把1变成0。在某些操作之后，您可能会得到一个带前导零的数字，但是对于这个问题，这无关紧要。<br>你的任务是计算你应该执行的最小操作数，以得到余数为10^y模10^x的数。换句话说，得到的数应该是余数10^y除以10^x。<br><strong>输入：</strong><br>输入的第一行包含三个整数n, x, y (0≤y &lt; x &lt; n≤2⋅10^5)——数字的长度，整数x和y。<br>输入的第二行包含一个由n位组成的小数，这个数字的每一位不是0就是1。它保证数字的第一个数字是1。<br><strong>输出：</strong><br>打印一个整数——要得到模10^x余数为10^y的数，您应该执行的最小操作数。换句话说，得到的数应该是余数10^y除以10x。<br><strong>样例：</strong><br>11 5 2<br>11010100101<br><strong>答案：</strong><br>1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n,y,x;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;y&gt;&gt;x;</span><br><span class="line">	string a;</span><br><span class="line">	cin&gt;&gt;a;</span><br><span class="line">	int ans=0;</span><br><span class="line">	</span><br><span class="line">	for(int i=n-1;i&gt;n-y-1;i--)&#123;</span><br><span class="line"></span><br><span class="line">		if(i&lt;n-x-1)&#123;</span><br><span class="line">			if(a[i]==&apos;1&apos;)ans++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i==n-x-1)&#123;</span><br><span class="line">			</span><br><span class="line">			if(a[i]==&apos;0&apos;)ans++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i&gt;n-x-1)&#123;</span><br><span class="line">			if(a[i]==&apos;1&apos;)ans++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="B-Polycarp-Training"><a href="#B-Polycarp-Training" class="headerlink" title="B Polycarp Training"></a>B Polycarp Training</h1><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>sort从小到大排序之后过一遍就行了，简单~</p>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>Polycarp希望在另一场编程比赛之前进行培训。在训练的第一天，他应该准确地解决1个问题，在第二天，准确地解决2个问题，在第三天，准确地解决3个问题，以此类推。在第k天，他应该解决k个问题。<br>Polycarp有n个竞赛列表，第i个竞赛由ai问题组成。在每天的比赛中，波利卡普必须选择一个他还没有解决的比赛，然后解决它。他准确地解决了这次比赛中的k个问题。其他的问题都被忽略了。如果在第k天没有包含至少k个Polycarp还没有解决的问题的比赛，那么Polycarp将停止他的训练。<br>如果波利卡选择最佳比赛，他可以训练多少天?<br><strong>输入：</strong><br>输入的第一行包含一个整数n (1≤n≤2⋅10 ^ 5)——比赛的数量。<br>输入的第二行包含n个整数a1 a2…an(1≤ai≤2⋅10 ^ 5)——的数量问题的第i个比赛。<br><strong>输出：</strong><br>打印一个整数——如果Polycarp选择最优的比赛，他可以训练的最大天数。<br><strong>样例：</strong><br>4<br>3 1 4 1<br><strong>答案：</strong><br>3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	int a[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	sort(a,a+n);</span><br><span class="line">	int now=1;</span><br><span class="line">	int ans=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		if(a[i]&gt;=now)&#123;</span><br><span class="line">			now++;ans++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="C-Good-String"><a href="#C-Good-String" class="headerlink" title="C Good String"></a>C Good String</h1><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>就按照题意模拟一遍，用string的函数erase()删除，注意空字符串也是good。easy一遍过~</p>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>如果字符串的长度是偶数，并且该字符串奇数位置上的每个字符都与下一个字符不同(第一个字符与第二个字符不同，第三个字符与第四个字符不同，以此类推)，那么让我们再次调用字符串good。例如，string good, string和xyyx是好字符串，string bad, aa和aabc不是好字符串。注意，空字符串被认为是好的。<br>给你一个字符串s，你必须从这个字符串中删除最少的字符数，这样它才会变好。<br><strong>输入：</strong><br>第一行包含一个整数n (1≤n≤2⋅105)——在年代的字符数。<br>第二行包含字符串s，由n个小写拉丁字母组成。<br><strong>输出：</strong><br>在第一行中，打印一个整数k(0≤k≤n)—必须从s中删除的最小字符数。<br>在第二行中，打印结果字符串s。如果它是空的，您可以保留第二行空白，或者根本不打印它。<br><strong>样例：</strong><br>4<br>aabc<br><strong>答案：</strong><br>2<br>ab<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	string a;</span><br><span class="line">	cin&gt;&gt;a;</span><br><span class="line">	string ans=a;</span><br><span class="line">	int num=0;</span><br><span class="line">	for(int i=0;i&lt;ans.size();i++)&#123;</span><br><span class="line">		</span><br><span class="line">		if(i%2==1)&#123;</span><br><span class="line">			</span><br><span class="line">			if(ans[i-1]==ans[i])&#123;</span><br><span class="line">				ans.erase(i-1,1);num+=1;i-=1;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	if(ans.size()==0)&#123;</span><br><span class="line">		cout&lt;&lt;num&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		if(ans.size()%2!=0)&#123;</span><br><span class="line">			ans.erase(ans.size()-1,1);</span><br><span class="line">			num+=1;</span><br><span class="line">			if(ans.size()==0)&#123;</span><br><span class="line">				cout&lt;&lt;num&lt;&lt;endl;exit(0);</span><br><span class="line">			&#125;</span><br><span class="line">			cout&lt;&lt;num&lt;&lt;endl;</span><br><span class="line">			cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			cout&lt;&lt;num&lt;&lt;endl;</span><br><span class="line">			cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="D-Almost-All-Divisors"><a href="#D-Almost-All-Divisors" class="headerlink" title="D. Almost All Divisors"></a>D. Almost All Divisors</h1><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>一开始理解错题意了，wa了两发。其实它给的是全部的因子，不能少。<br>首先假设是可行的，求出这个数，之后再判断给出的是不是它全部的因子。于是就用了个求因子数量的模板，再检查相乘是不是等于它。  </p>
+<h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>我们猜的是某个整数x，它给出了一个几乎所有除数的列表。几乎所有的意思是除了1和x外，列表中有所有的除数。<br>您的任务是找到可能是猜测数字的最小整数x，或者说输入数据是矛盾的，不可能找到这样的数字。<br>你必须回答t个独立的问题。<br><strong>输入：</strong><br>输入的第一行包含一个整数t(1≤t≤25)——查询的数量。然后是t查询。<br>查询的第一行包含一个整数n(1≤n≤300)——列表中的除数。<br>查询的第二行包含n个整数 d1,d2，…，dn(2≤di≤10^6)，其中di是猜测数字的第i个因子。它保证所有的值di都是不同的。<br><strong>输出：</strong><br>对于每个查询，打印它的答案。<br>如果查询中的输入数据是矛盾的，并且不可能找到这样的数字x，即给定的除数列表是几乎所有除数的列表，那么打印-1。否则打印最小可能的x。<br><strong>样例：</strong><br>2<br>8<br>8 2 12 6 4 24 16 3<br>1<br>2<br><strong>答案：</strong><br>48<br>4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">long long int count(long long int n)&#123;</span><br><span class="line">    long long int s=1;</span><br><span class="line">    for(int i=2;i*i&lt;=n;i++)&#123;</span><br><span class="line">        if(n%i==0)&#123;</span><br><span class="line">            long long int a=0;</span><br><span class="line">            while(n%i==0)&#123;</span><br><span class="line">                n/=i;</span><br><span class="line">                a++;</span><br><span class="line">            &#125;</span><br><span class="line">            s=s*(a+1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(n&gt;1) s=s*2;</span><br><span class="line">    return s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">	int T;</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	for(int w=0;w&lt;T;w++)&#123;</span><br><span class="line">		long long int n;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		long long int a[n];</span><br><span class="line">		for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">			cin&gt;&gt;a[i];</span><br><span class="line">		&#125;</span><br><span class="line">		sort(a,a+n);</span><br><span class="line">		bool y=1;</span><br><span class="line">		if(n%2==1)&#123;</span><br><span class="line">			long long int ans=a[(n-1)/2]*a[(n-1)/2];</span><br><span class="line">			if(count(ans)-2!=n)&#123;</span><br><span class="line">				cout&lt;&lt;-1&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">			for(int i=0;i&lt;(n-1)/2;i++)&#123;</span><br><span class="line">				if(a[i]*a[n-1-i]!=ans)&#123;</span><br><span class="line">					y=0;break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			if(y)&#123;</span><br><span class="line">				cout&lt;&lt;ans&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				cout&lt;&lt;-1&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			long long int ans=a[0]*a[n-1];</span><br><span class="line">			if(count(ans)-2!=n)&#123;</span><br><span class="line">				cout&lt;&lt;-1&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">			for(int i=0;i&lt;n/2;i++)&#123;</span><br><span class="line">				if(a[i]*a[n-1-i]!=ans)&#123;</span><br><span class="line">					y=0;break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			if(y)&#123;</span><br><span class="line">				cout&lt;&lt;ans&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				cout&lt;&lt;-1&lt;&lt;endl;continue;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="E-Two-Arrays-and-Sum-of-Functions"><a href="#E-Two-Arrays-and-Sum-of-Functions" class="headerlink" title="E Two Arrays and Sum of Functions"></a>E Two Arrays and Sum of Functions</h1><h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><p>当时时间不够了，没写完。。。<br>一开始以为a[n]，b[n]都可以改顺序，后来发现不对，只有b[n]可以换，也就是，a[i]所乘的a[i]*b[i]的次数k是确定的，所以先把k[i]乘到a[i]上，得到新的数列a2[n]。再排序，让最大的a2和最小的b相乘。  </p>
+<h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a>题目</h3><p><a href="http://codeforces.com/contest/1165/problem/E" target="_blank" rel="noopener">http://codeforces.com/contest/1165/problem/E</a>     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	long long int a[n],b[n],a2[n];</span><br><span class="line">	long long int k1=n,k2=1;</span><br><span class="line">	long long int k[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">		k[i]=k1*k2;</span><br><span class="line">		a2[i]=a[i]*k[i];</span><br><span class="line">		k1-=1;k2+=1;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cin&gt;&gt;b[i];</span><br><span class="line">		b[i]=b[i]%998244353;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(a2,a2+n);</span><br><span class="line">	sort(b,b+n);</span><br><span class="line">	long long int ans=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		ans=(((a2[i]%998244353)*b[n-i-1])%998244353+ans)%998244353;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/05/14/CF-Round-560-Div-3/">CF Round #560(Div.3)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/26/CF-Round-63/">Educational Codeforces Round 63 (Rated for Div. 2)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/16/CF-Round-552-Div-3/">CF Round #552(Div.3)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/13/2050-Programming-Competition/">2050 Programming Competition</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/09/最短路练习/">最短路练习</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 小乔QvQ
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="bg"></div>
+</body>
+</html>
