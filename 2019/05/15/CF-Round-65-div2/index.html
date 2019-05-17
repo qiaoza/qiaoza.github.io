@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CF Round #65(Div.2) | 一起喵喵喵喵喵~</title>
+  <meta name="author" content="小乔QvQ">
+
+  
+  <meta name="description" content="-7，居然又双叒叕掉分了，自闭ing。。。出的太慢了，b题一直搞不懂什么意思，研究了半天才明白给的样例是错的思路，正确思路要自己想，难受了，其实非常简单的，浪费好多时间，还wa了两发。">
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="CF Round #65(Div.2)">
+  <meta property="og:site_name" content="一起喵喵喵喵喵~">
+
+  
+  
+
+  
+    <meta property="og:image" content="">
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <link rel="alternate" href="/atom.xml" title="一起喵喵喵喵喵~" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">一起喵喵喵喵喵~</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-05-15T00:28:50.000Z"><a href="/2019/05/15/CF-Round-65-div2/">2019-05-15</a></time>
+      
+      
+  
+    <h1 class="title">CF Round #65(Div.2)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>-7，居然又双叒叕掉分了，自闭ing。。。<br>出的太慢了，b题一直搞不懂什么意思，研究了半天才明白给的样例是错的思路，正确思路要自己想，难受了，其实非常简单的，浪费好多时间，还wa了两发。<br><a id="more"></a></p>
+<h1 id="A-Telephone-Number"><a href="#A-Telephone-Number" class="headerlink" title="A Telephone Number"></a>A Telephone Number</h1><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>看第一个8之后有没有10个数字，easy~</p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>电话号码是由11个数字组成的序列，其中第一个数字是8。例如，序列80011223388是一个电话号码，但是序列70011223388和80000011223388不是。<br>给定一个长度为n的字符串s，由数字组成。<br>在一个操作中，您可以从字符串s中删除任何字符。例如，可以从字符串1121获取字符串112、111或121。<br>您需要确定是否存在这样一个操作序列(可能是空的)，在此序列之后，字符串s将成为一个电话号码。<br><strong>样例：</strong><br>2<br>13<br>7818005553535<br>11<br>31415926535<br><strong>答案：</strong><br>YES<br>NO<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int T;</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	for(int w=0;w&lt;T;w++)&#123;</span><br><span class="line">		int n;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		string a;</span><br><span class="line">		cin&gt;&gt;a;</span><br><span class="line">		bool y=0;</span><br><span class="line">		int num=0;</span><br><span class="line">		for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">			if(a[i]==&apos;8&apos;&amp;&amp;!y)&#123;</span><br><span class="line">				y=1;num+=1;continue;</span><br><span class="line">			&#125;</span><br><span class="line">			if(y)&#123;</span><br><span class="line">				num+=1;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if(num&gt;=11)&#123;</span><br><span class="line">			cout&lt;&lt;&quot;YES&quot;&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="B-Lost-Numbers"><a href="#B-Lost-Numbers" class="headerlink" title="B. Lost Numbers"></a>B. Lost Numbers</h1><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>提问1、2和3、4和2、3和4、5<br>其实也就是求出了12，34，56，23，45，61相乘的结果，之后看哪两个能整除5，也就可以确定重复的那个数是15，再根据这个数求出其他五个数分别是哪些。  </p>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p><a href="http://codeforces.com/contest/1167/problem/B" target="_blank" rel="noopener">http://codeforces.com/contest/1167/problem/B</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int a[6];</span><br><span class="line">	printf(&quot;? 1 2\n&quot;);</span><br><span class="line">	fflush(stdout);</span><br><span class="line">	cin&gt;&gt;a[0];</span><br><span class="line">	printf(&quot;? 3 4\n&quot;);</span><br><span class="line">	fflush(stdout);</span><br><span class="line">	cin&gt;&gt;a[2];</span><br><span class="line">	a[4]=4*8*15*16*23*42/a[0]/a[2];</span><br><span class="line">	printf(&quot;? 2 3\n&quot;);</span><br><span class="line">	fflush(stdout);    </span><br><span class="line">	cin&gt;&gt;a[1];</span><br><span class="line">	printf(&quot;? 4 5\n&quot;);</span><br><span class="line">	fflush(stdout);</span><br><span class="line">	cin&gt;&gt;a[3];</span><br><span class="line">	a[5]=4*8*15*16*23*42/a[1]/a[3];</span><br><span class="line">	int ans[7];</span><br><span class="line">	if(a[0]%5==0&amp;&amp;a[5]%5==0)&#123;</span><br><span class="line">		ans[1]=15;</span><br><span class="line">		ans[2]=a[0]/ans[1];</span><br><span class="line">		ans[3]=a[1]/ans[2];</span><br><span class="line">		ans[4]=a[2]/ans[3];</span><br><span class="line">		ans[5]=a[3]/ans[4];</span><br><span class="line">		ans[6]=a[4]/ans[5];</span><br><span class="line">	&#125;</span><br><span class="line">	if(a[0]%5==0&amp;&amp;a[1]%5==0)&#123;</span><br><span class="line">		ans[2]=15;</span><br><span class="line">		ans[3]=a[1]/ans[2];</span><br><span class="line">		ans[4]=a[2]/ans[3];</span><br><span class="line">		ans[5]=a[3]/ans[4];</span><br><span class="line">		ans[6]=a[4]/ans[5];</span><br><span class="line">		ans[1]=a[5]/ans[6];</span><br><span class="line">	&#125;</span><br><span class="line">	if(a[1]%5==0&amp;&amp;a[2]%5==0)&#123;</span><br><span class="line">		ans[3]=15;</span><br><span class="line">		ans[4]=a[2]/ans[3];</span><br><span class="line">		ans[5]=a[3]/ans[4];</span><br><span class="line">		ans[6]=a[4]/ans[5];</span><br><span class="line">		ans[1]=a[5]/ans[6];</span><br><span class="line">		ans[2]=a[0]/ans[1];</span><br><span class="line">	&#125;</span><br><span class="line">	if(a[2]%5==0&amp;&amp;a[3]%5==0)&#123;</span><br><span class="line">		ans[4]=15;</span><br><span class="line">		ans[5]=a[3]/ans[4];</span><br><span class="line">		ans[6]=a[4]/ans[5];</span><br><span class="line">		ans[1]=a[5]/ans[6];</span><br><span class="line">		ans[2]=a[0]/ans[1];</span><br><span class="line">		ans[3]=a[1]/ans[2];</span><br><span class="line">	&#125;</span><br><span class="line">	if(a[3]%5==0&amp;&amp;a[4]%5==0)&#123;</span><br><span class="line">		ans[5]=15;</span><br><span class="line">		ans[6]=a[4]/ans[5];</span><br><span class="line">		ans[1]=a[5]/ans[6];</span><br><span class="line">		ans[2]=a[0]/ans[1];</span><br><span class="line">		ans[3]=a[1]/ans[2];</span><br><span class="line">		ans[4]=a[2]/ans[3];</span><br><span class="line">	&#125;</span><br><span class="line">	if(a[4]%5==0&amp;&amp;a[5]%5==0)&#123;</span><br><span class="line">		ans[6]=15;</span><br><span class="line">		ans[1]=a[5]/ans[6];</span><br><span class="line">		ans[2]=a[0]/ans[1];</span><br><span class="line">		ans[3]=a[1]/ans[2];</span><br><span class="line">		ans[4]=a[2]/ans[3];</span><br><span class="line">		ans[5]=a[3]/ans[4];</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;&apos;!&apos;;</span><br><span class="line">	for(int i=0;i&lt;6;i++)&#123;</span><br><span class="line">		cout&lt;&lt;&apos; &apos;&lt;&lt;ans[i+1];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="C-News-Distribution"><a href="#C-News-Distribution" class="headerlink" title="C News Distribution"></a>C News Distribution</h1><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>简单的并查集，套板子，用一个num记录一下每个集有多少人就行了。</p>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>在一些社交网络中，有n个用户在m个朋友群中相互通信。让我们分析一下在用户之间分发新闻的过程。<br>最初，某个用户x从某个源接收消息。然后他或她将消息发送给他或她的朋友(两个用户是朋友，如果至少有一个组，他们都属于这个组)。朋友们继续发送消息给他们的朋友，等等。当没有一对朋友，其中一个知道这个消息，而另一个不知道时，这个过程就结束了。<br>对于每个用户x，您必须确定，如果最初只有用户x开始发布消息，那么知道该消息的用户数是多少。<br><strong>样例：</strong><br>7 5<br>3 2 5 4<br>0<br>2 1 2<br>1 1<br>2 6 7<br><strong>答案：</strong><br>4 4 1 4 4 2 2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int ufs[500005];    //并查集</span><br><span class="line">int num[500005];</span><br><span class="line">void Init(int n)    //初始化</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">        ufs[i] = i;</span><br><span class="line">        num[i]=1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int GetRoot(int a)    //获得a的根节点。路径压缩</span><br><span class="line">&#123;</span><br><span class="line">    if(ufs[a]!=a)&#123;    //没找到根节点</span><br><span class="line">        ufs[a] = GetRoot(ufs[a]);</span><br><span class="line">    &#125;</span><br><span class="line">    return ufs[a];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Merge(int a,int b)    //合并a和b的集合</span><br><span class="line">&#123;</span><br><span class="line">	int ga=GetRoot(a);</span><br><span class="line">	int gb=GetRoot(b);</span><br><span class="line">	ufs[a]=ga;ufs[b]=gb;</span><br><span class="line">	if(ufs[gb] != ga)&#123;</span><br><span class="line">		num[ga]+=num[gb];</span><br><span class="line">		ufs[gb] = ga;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">bool Query(int a,int b)    //查询a和b是否在同一集合</span><br><span class="line">&#123;</span><br><span class="line">    return GetRoot(a)==GetRoot(b);</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n,m;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	Init(n);</span><br><span class="line">	for(int i=0;i&lt;m;i++)&#123;</span><br><span class="line">		int k;</span><br><span class="line">		cin&gt;&gt;k;</span><br><span class="line">		if(k==0)continue;</span><br><span class="line">		int a;cin&gt;&gt;a;</span><br><span class="line">		int b;</span><br><span class="line">		for(int j=1;j&lt;k;j++)&#123;</span><br><span class="line">			cin&gt;&gt;b;</span><br><span class="line">			Merge(a,b);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cout&lt;&lt;num[GetRoot(i+1)];</span><br><span class="line">		if(i!=n-1)cout&lt;&lt;&apos; &apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="D-Bicolored-RBS"><a href="#D-Bicolored-RBS" class="headerlink" title="D. Bicolored RBS"></a>D. Bicolored RBS</h1><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>把’(‘和’)’配对，用两个栈存放’(‘。每遇到一个’(‘，优先放在小的那个栈里；每遇到一个’)’，优先和更大的那个栈的’(‘配对。</p>
+<h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>如果字符串不包含除“(”和“)”之外的任何字符，则称为括号序列。如果可以通过在这个序列中插入字符“+”和“1”来获得正确的算术表达式，则括号序列称为正则序列(简称RBS)。例如,“”,“(())”和“()()”是苏格兰皇家银行(RBS)和“)”和“(()”。<br>我们可以看到,每一个在苏格兰皇家银行开设支架搭配一些括号,而且,用这个事实,我们可以定义嵌套深度支架对苏格兰皇家银行的最大数量,这样里面的第二条谎言1日,第三个——在2日等等。例如,嵌套深度”“是0,“()()()”是1和“()((())())”是3。<br>现在，已知RBS s的长度为偶数n。应该将s的每个括号涂成两种颜色之一:红色或蓝色。括号序列r(只包含红色括号)为RBS，括号序列b(只包含蓝色括号)为RBS。任何一个都可以是空的。不允许对s、r或b中的字符进行重新排序。任何括号都不能不着色。<br>在所有可能的变体中，您应该选择一个最小化r和b嵌套深度最大值的变体。如果有多个解决方案，您可以打印其中任何一个。<br><strong>样例：</strong><br>10<br>((()())())<br><strong>答案：</strong><br>0110001111<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">//嘤嘤嘤 </span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;stack&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	string a;</span><br><span class="line">	cin&gt;&gt;a;</span><br><span class="line">	stack&lt;int&gt;s1,s0;</span><br><span class="line">	int ans[n];</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		if(a[i]==&apos;(&apos;)&#123;</span><br><span class="line">			if(s1.size()&lt;s0.size())&#123;</span><br><span class="line">				s1.push(i);</span><br><span class="line">				ans[i]=1;</span><br><span class="line">			&#125;</span><br><span class="line">			else&#123;</span><br><span class="line">				s0.push(i);</span><br><span class="line">				ans[i]=0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			if(s1.size()&gt;s0.size())&#123;</span><br><span class="line">				s1.pop();</span><br><span class="line">				ans[i]=1;</span><br><span class="line">			&#125;</span><br><span class="line">			else&#123;</span><br><span class="line">				s0.pop();</span><br><span class="line">				ans[i]=0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">		cout&lt;&lt;ans[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/05/15/CF-Round-65-div2/">CF Round #65(Div.2)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/05/14/CF-Round-560-Div-3/">CF Round #560(Div.3)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/26/CF-Round-63/">Educational Codeforces Round 63 (Rated for Div. 2)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/16/CF-Round-552-Div-3/">CF Round #552(Div.3)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/04/13/2050-Programming-Competition/">2050 Programming Competition</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 小乔QvQ
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="bg"></div>
+</body>
+</html>
