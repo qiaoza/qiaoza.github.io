@@ -7,8 +7,7 @@
   <meta name="author" content="小乔QvQ">
 
   
-  <meta name="description" content="A - Super Jumping! Jumping! Jumping!
-123456789101112for(int i=1;i&amp;lt;=n;i++)&amp;#123;	cin&amp;gt;&amp;gt;a[i];	dp[i]=a[i];&amp;#125;		for(int i=n-1;i&amp;gt;=0;i--)&amp;#123">
+  <meta name="description" content="第一次完全靠自己想出了一道dp，虽然超级简单QAQ">
   
 
   
@@ -74,7 +73,8 @@
     </header>
     <div class="entry">
       
-        <h2 id="A-Super-Jumping-Jumping-Jumping"><a href="#A-Super-Jumping-Jumping-Jumping" class="headerlink" title="A - Super Jumping! Jumping! Jumping!"></a>A - Super Jumping! Jumping! Jumping!</h2><hr>
+        <p>第一次完全靠自己想出了一道dp，虽然超级简单QAQ<br><a id="more"></a></p>
+<h2 id="A-Super-Jumping-Jumping-Jumping"><a href="#A-Super-Jumping-Jumping-Jumping" class="headerlink" title="A - Super Jumping! Jumping! Jumping!"></a>A - Super Jumping! Jumping! Jumping!</h2><hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">	cin&gt;&gt;a[i];</span><br><span class="line">	dp[i]=a[i];</span><br><span class="line">&#125;		</span><br><span class="line">for(int i=n-1;i&gt;=0;i--)&#123;  </span><br><span class="line">	int max=0;   </span><br><span class="line">	for(int j=i+1;j&lt;=n;j++)&#123;  </span><br><span class="line">        if(a[j]&gt;a[i]&amp;&amp;dp[j]&gt;max)max=dp[j];  </span><br><span class="line">	&#125;</span><br><span class="line">	dp[i]+=max;</span><br><span class="line">&#125;</span><br><span class="line">cout&lt;&lt;dp[0]&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
 <p>第一个完全自己想出来的dp题，虽然简单的要命，但仍然有纪念意义！！<br>dp[i]=a[i]+max(dp[i+1],…,dp[n])【也就是加上后面所有的当中的最大值】   </p>
 <h2 id="B-Common-Subsequence"><a href="#B-Common-Subsequence" class="headerlink" title="B - Common Subsequence"></a>B - Common Subsequence</h2><hr>
