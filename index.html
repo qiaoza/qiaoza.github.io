@@ -62,6 +62,59 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2019-08-01T12:00:05.000Z"><a href="/2019/08/01/暑假dp总结-md/">2019-08-01</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2019/08/01/暑假dp总结-md/">暑假dp总结</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="A-Super-Jumping-Jumping-Jumping"><a href="#A-Super-Jumping-Jumping-Jumping" class="headerlink" title="A - Super Jumping! Jumping! Jumping!"></a>A - Super Jumping! Jumping! Jumping!</h2><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">	cin&gt;&gt;a[i];</span><br><span class="line">	dp[i]=a[i];</span><br><span class="line">&#125;		</span><br><span class="line">for(int i=n-1;i&gt;=0;i--)&#123;  </span><br><span class="line">	int max=0;   </span><br><span class="line">	for(int j=i+1;j&lt;=n;j++)&#123;  </span><br><span class="line">        if(a[j]&gt;a[i]&amp;&amp;dp[j]&gt;max)max=dp[j];  </span><br><span class="line">	&#125;</span><br><span class="line">	dp[i]+=max;</span><br><span class="line">&#125;</span><br><span class="line">cout&lt;&lt;dp[0]&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+<p>第一个完全自己想出来的dp题，虽然简单的要命，但仍然有纪念意义！！<br>dp[i]=a[i]+max(dp[i+1],…,dp[n])【也就是加上后面所有的当中的最大值】   </p>
+<h2 id="B-Common-Subsequence"><a href="#B-Common-Subsequence" class="headerlink" title="B - Common Subsequence"></a>B - Common Subsequence</h2><hr>
+<p>想法：<br>如果s1[i]==s2[j] 则 c[i][j]=c[i-1][j-1]+1<br>如果s1[i]!=s2[j] 则 c[i][j]=max(c[i-1][j],c[i][j-1])<br>【二维的，画个表格更清楚】【往左上角方向去找】<br>【参考：<a href="https://blog.csdn.net/qq_36979930/article/details/81149894" target="_blank" rel="noopener">https://blog.csdn.net/qq_36979930/article/details/81149894</a> 】  </p>
+<h2 id="C-Bone-Collector"><a href="#C-Bone-Collector" class="headerlink" title="C - Bone Collector"></a>C - Bone Collector</h2><hr>
+<p>老题了，然而还是不会做，气哭了。<br>【参考：<a href="https://blog.csdn.net/qq_36791466/article/details/84072263" target="_blank" rel="noopener">https://blog.csdn.net/qq_36791466/article/details/84072263</a> 】<br>我们定义一个二维数组m[ i ][ j ]  i表示第i个骨骼，j表示背包容量为j；</p>
+<pre><code>用0-1背包的问题来求解，就是要得到每一步的最优解，此时第i个物品面临选择，首先我们要看容量是否大于它的重量，
+
+即 j &gt; w[ i ]
+</code></pre><p>如果大于，我们可以选择拿或不拿</p>
+<pre><code>1：拿，那么就必须要占用当前背包的空间。即用当前背包总容量 j - w[ i ]，再占用1个物品空间，所以i-1，此时的总价值就是m [ i-1 ] [ j-w[ i ] ] 的解 + 当前的价值v[ i ] ，得到的就是放入当前物品得到的最优解。
+
+2：不拿，那么就还是上一步的解，m[ i-1 ][ j ]
+</code></pre><h2 id="D-Piggy-Bank"><a href="#D-Piggy-Bank" class="headerlink" title="D - Piggy-Bank"></a>D - Piggy-Bank</h2><hr>
+<p>自己思考了很久，最后宣告失败，逐渐陷入自闭。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int dp[sum+1];</span><br><span class="line">memset(dp,INF,sizeof(dp));</span><br><span class="line">dp[0]=0;</span><br><span class="line">for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">	for(int j=v[i];j&lt;=sum;j++)&#123;</span><br><span class="line">		dp[j]=min(dp[j],dp[j-v[i]]+p[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">if(dp[sum]==INF)&#123;</span><br><span class="line">	cout&lt;&lt;&quot;This is impossible.&quot;&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	cout&lt;&lt;&quot;The minimum amount of money in the piggy-bank is &quot;&lt;&lt;dp[sum]&lt;&lt;&apos;.&apos;&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href="javascript:void(0)" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2019-05-15T00:28:50.000Z"><a href="/2019/05/15/CF-Round-65-div2/">2019-05-15</a></time>
       
       
@@ -421,6 +474,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2019/08/01/暑假dp总结-md/">暑假dp总结</a>
+      </li>
+    
+      <li>
         <a href="/2019/05/15/CF-Round-65-div2/">CF Round #65(Div.2)</a>
       </li>
     
@@ -434,10 +491,6 @@
     
       <li>
         <a href="/2019/04/16/CF-Round-552-Div-3/">CF Round #552(Div.3)</a>
-      </li>
-    
-      <li>
-        <a href="/2019/04/13/2050-Programming-Competition/">2050 Programming Competition</a>
       </li>
     
   </ul>
